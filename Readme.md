@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Bodik Malomuzh](https://up.htmlacademy.ru/htmlcss/25/user/329099).
-* Наставник: [Лиза Позднякова](https://htmlacademy.ru/profile/lizzy).
+* Наставник: [Лиза Позднякова](https://up.htmlacademy.ru/htmlcss/25/user/5608).
 
 ---
 
