@@ -45,11 +45,8 @@
        </nav>
     </header>
     <main class="container">
-
-<!--     Вот насчет этого блока не уверен совсем, проблема с названием класса, без понятия как это все назвать.
-     И не уверен насчет разметки, было 2 варианта, выбрал этот разделив блок на 2 части вверх низ, хотел бы обсудить.-->
-      <section class="i-dont-know">
-        <section class="i-dont-know-top">
+      <section class="advantages">
+        <section class="advantages-top">
           <ul>
             <li>
               <h2>Материалы</h2>
@@ -65,13 +62,26 @@
             </li>
           </ul>
         </section>
-        <section class="i-dont-know-bottom">
-<!--         Тут посчитал что лучше артикл -->
-          <article>
-            <h2>Дрели</h2>
-            <p>Соседям на радость</p>
-            <a class="button" href="#">Открыть каталог</a>
-          </article>
+        <section class="advantages-bottom">
+<!--         Я выбрал артикл опираясь на то что он выглядит как блок рекламы, но это было не верно так как это слайдер у нас есть
+         элементы управления и вырвать это из сайта без потери смысла не получится.
+         А про слайды в макете я как-то забыл...
+         Объеденил их в секцию слайдер в которой разместил слайды, посчитал это правилным, так как у нас будет блок слайды и уже в нем будут блоки
+         с самими слайдами
+         И еще вопрос, такой вариант общения будет удобен?
+         Оставлять комментарии где-то в коде где я не уверен или у меня были вопросы да бы я их потом не забыл) -->
+          <section class="advantages-bottom slider">
+            <section>
+              <h2>Дрели</h2>
+              <p>Соседям на радость</p>
+              <a class="button" href="catalog.html">Открыть каталог</a>
+            </section>
+            <section>
+              <h2>Перфораторы</h2>
+              <p>Настоящие мужские игрушки</p>
+              <a class="button" href="catalog.html">Открыть каталог</a>
+            </section>
+          </section>
           <ul>
             <li>
               <h2>Скидки 50%</h2>
@@ -84,13 +94,12 @@
           </ul>
         </section>
       </section>
-<!--      -->
 
       <section class="popular-goods">
-        <section class="popular-goods-header header-popular">
+        <header class="popular-goods-header header-popular">
           <h2>Популярные товары:</h2>
           <a href="#" class="button">Все популярные товары</a>
-        </section>
+        </header>
         <ul class="catalog-list">
           <li class="catalog-item">
             <img src="http://placehold.it/150x100" alt="Перфоратор BOSCH BFG 9000">
@@ -121,19 +130,18 @@
           <a href="#" class="button">Все производители</a>
         </section>
         <ul class="popular-manufacturers-list">
-          <li class="popular-manufacturers-item"><img src="http://placehold.it/150x100" alt="BOSCH"></li>
-          <li class="popular-manufacturers-item"><img src="http://placehold.it/150x100" alt="Makita"></li>
-          <li class="popular-manufacturers-item"><img src="http://placehold.it/150x100" alt="DeWALT"></li>
-          <li class="popular-manufacturers-item"><img src="http://placehold.it/150x100" alt="Интерскоп"></li>
-          <li class="popular-manufacturers-item"><img src="http://placehold.it/150x100" alt="HITACHI"></li>
-          <li class="popular-manufacturers-item"><img src="http://placehold.it/150x100" alt="LG"></li>
-          <li class="popular-manufacturers-item"><img src="http://placehold.it/150x100" alt="AEG"></li>
-          <li class="popular-manufacturers-item"><img src="http://placehold.it/150x100" alt="metabo"></li>
+          <li class="popular-manufacturers-item"><a href="#"><img src="http://placehold.it/150x100" alt="BOSCH"></a></li>
+          <li class="popular-manufacturers-item"><a href="#"><img src="http://placehold.it/150x100" alt="Makita"></a></li>
+          <li class="popular-manufacturers-item"><a href="#"><img src="http://placehold.it/150x100" alt="DeWALT"></a></li>
+          <li class="popular-manufacturers-item"><a href="#"><img src="http://placehold.it/150x100" alt="Интерскоп"></a></li>
+          <li class="popular-manufacturers-item"><a href="#"><img src="http://placehold.it/150x100" alt="HITACHI"></a></li>
+          <li class="popular-manufacturers-item"><a href="#"><img src="http://placehold.it/150x100" alt="LG"></a></li>
+          <li class="popular-manufacturers-item"><a href="#"><img src="http://placehold.it/150x100" alt="AEG"></a></li>
+          <li class="popular-manufacturers-item"><a href="#"><img src="http://placehold.it/150x100" alt="metabo"></a></li>
         </ul>
       </section>
 
       <section class="services">
-<!--       Или было правильней назвать его хедером?-->
         <section class="services-top">
           <h2>Сервисы</h2>
           <p>
@@ -141,20 +149,39 @@
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
         </section>
-<!--        Тут еще есть сомнения -->
         <section class="services-bottom">
           <ul class="services-list">
             <li class="services-item">Доставка</li>
             <li class="services-item">Гарантия</li>
             <li class="services-item">Кредит</li>
           </ul>
-          <h2>Доставка</h2>
-          <p>
-            Мы с удовольствием доставим ваш товар прямо
-            к вашему подъезду совершенно бесплатно!
-            Ведь мы неплохо заработаем,
-            поднимая его на ваш этаж!
-          </p>
+          <section class="services-bottom-slider">
+            <section class="delivery">
+              <h2>Доставка</h2>
+              <p>
+                Мы с удовольствием доставим ваш товар прямо
+                к вашему подъезду совершенно бесплатно!
+                Ведь мы неплохо заработаем,
+                поднимая его на ваш этаж!
+              </p>
+            </section>
+            <section class="warranty">
+              <h2>Гарантия</h2>
+              <p>
+                Если купленный у нас товар поломается или заискрит,
+                а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.
+                Дом уж восстановите как-нибудь сами.
+              </p>
+            </section>
+            <section class="credit">
+              <h2>Кредит</h2>
+              <p>
+                Залезть в долговую яму стало проще!
+                Кредитные консультанты придут вам на помощь.
+              </p>
+              <a class="button" href="#">ОТПРАВИТЬ ЗАЯВКУ</a>
+            </section>
+          </section>
         </section>
       </section>
 
@@ -184,6 +211,11 @@
           <a class="button" href="#">Заблудились? Напишите нам!</a>
         </section>
       </section>
+
+      <section class="modal write-us">
+<!--Блок под модальное окно-->
+      </section>
+
     </main>
     <footer class="main-footer">
       <section class="main-footer-top">
@@ -226,7 +258,7 @@
         </p>
         <p class="footer-copyright">
           Разработано —
-          <a href="htmlacademy.ru">htmlacademy.ru</a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
       </section>
     </footer>
