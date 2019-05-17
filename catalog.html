@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -10,24 +11,27 @@
         <a class="main-header-logo" href="index.html">
           <img class="logo" src="img/index-logo.png" width="220" height="47" alt="Техномарт">
         </a>
-        <form action="GET"></form>
+        <form action="#" method="get">
+          <input name="search" placeholder="Поиск:" type="search">
+          <button type="submit">Поиск</button>
+        </form>
         <a class="button bookmarks" href="#">Закладки: </a>
         <a class="button basket" href="#">Корзина: </a>
         <a class="button checkout" href="#">Оформить заказ</a>
       </section>
       <section class="main-header-middle">
-        <h1>
+       <h1>
           Интернет-магазин
           строительных материалов
           и инструментов для ремонта
-         </h1>
-         <span class="phone-number">+7 (812) 555-05-55</span>
-         <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+       </h1>
+       <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
+       <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
          <section class="user-navigation">
            <a href="#">Равшан Джамшутович</a>
            <ul>
-             <li><a href="">Мои заказы</a></li>
-             <li><a href="">Личный кабинет</a></li>
+             <li><a href="#">Мои заказы</a></li>
+             <li><a href="#">Личный кабинет</a></li>
            </ul>
          </section>
        </section>
@@ -43,34 +47,81 @@
          </ul>
        </nav>
     </header>
-
     <main class="container">
       <h2>Перфораторы</h2>
       <ul class="breadcrumbs">
-        <li><a href="">Каталог</a></li>
-        <li><a href="">Инструменты</a></li>
+        <li><a href="#">Каталог</a></li>
+        <li><a href="#">Инструмент</a></li>
         <li>Перфораторы</li>
       </ul>
       <section class="filter">
-       <h3>Фильтр:</h3>
-       <h4>Цена:</h4>
-       <hr>
-       <h4>Производители:</h4>
-       <ul class="manufacturers-list">
-        <li><input type="checkbox" id="bosch"><label for="bosch">BOSCH</label></li>
-        <li><input type="checkbox" id="interscop"><label for="interscop">ИНТЕРСКОП</label></li>
-        <li><input type="checkbox" id="makita"><label for="makita">MAKITA</label></li>
-        <li><input type="checkbox" id="dewalt"><label for="dewalt">DEWALT</label></li>
-        <li><input type="checkbox" id="hitachi"><label for="hitachi">HITACHI</label></li>
-       </ul>
-       <hr>
-       <h4>Питание:</h4>
-       <ul class="filter-power">
-        <li><input type="radio" name="power">Аккумуляторные</li>
-        <li><input type="radio" name="power">Сетевые</li>
-       </ul>
-       <button type="submit">Показать</button>
+<!--    при проверке валидатором ему не нравится  aria-label, я вставил его сюда так как не ясно чего будет фильтр, я правильно сделал или это уже перебор?
+       но гугл говорит что использовать мне его по сути не нужно так как текстовое содержимое у меня есть
+
+       P.S. Google
+       "Атрибут  aria-label  создаёт текстовую метку текущего элемента в случае отсутствия видимого текста описания элемента."
+       -->
+        <h3 aria-label="Фильтр товаров">Фильтр:</h3>
+        <form action="#" method="get">
+          <fieldset>
+            <legend>Цена:</legend>
+          </fieldset>
+          <fieldset>
+            <legend>Производители:</legend>
+            <ul class="manufacturers-list">
+              <li class="filter-option">
+                <label>
+                  <input type="checkbox" name="bosch">
+                  BOSCH
+                </label>
+              </li>
+              <li class="filter-option">
+                <label>
+                  <input type="checkbox" name="interscop">
+                  ИНТЕРСКОП
+                </label>
+              </li>
+              <li class="filter-option">
+                <label>
+                  <input type="checkbox" name="makita">
+                  MAKITA
+                </label>
+              </li>
+              <li class="filter-option">
+                <label>
+                  <input type="checkbox" name="dewalt">
+                  DEWALT
+                </label>
+              </li>
+              <li class="filter-option">
+                <label>
+                  <input type="checkbox" name="hitachi">
+                  HITACHI
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Питание:</legend>
+            <ul class="filter-power">
+              <li class="filter-option">
+                <label>
+                  <input type="radio" name="power">
+                  Аккумуляторные
+                </label>
+              </li>
+              <li class="filter-option">
+                <label>
+                  <input type="radio" name="power">
+                  Сетевые
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+         <button type="submit">Показать</button>
+        </form>
       </section>
+
       <section class="sort">
         <h3>Сортировка:</h3>
       </section>
@@ -142,11 +193,9 @@
       </article>
 
       <section class="modal cart">
+        <button class="cross-close" type="button" aria-label="Закрыть и продолжить покупки">X</button>
         <h3>Товар добавлен в корзину!</h3>
-        <section class="bottom">
-<!--     Вставил ссылку так как она ведет на другую страницу с оформлением заказа
-         Вставил кнопку так как она никуда не ведет и просто закрывает модальное окно
--->
+        <section class="modal-bottom">
           <a class="button" href="#">Оформить заказ</a>
           <button type="button">Продолжить покупки</button>
         </section>
@@ -184,9 +233,9 @@
           Все права защищены
         </p>
         <ul class="footer-social">
-          <li><a class="social-button" href="#">Вконтакте</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
+          <li><a class="social-button" href="#" aria-label="Ссылка на группу Вконтакте">Вконтакте</a></li>
+          <li><a class="social-button" href="#" aria-label="Ссылка на группу Фейсбука">Фейсбук</a></li>
+          <li><a class="social-button" href="#" aria-label="Ссылка на группу Инстаграма">Инстаграм</a></li>
         </ul>
         <p class="feedback">
           Обратная связь:

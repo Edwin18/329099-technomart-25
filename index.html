@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -10,7 +11,17 @@
         <a class="main-header-logo" href="index.html">
           <img class="logo" src="img/index-logo.png" width="220" height="47" alt="Техномарт">
         </a>
-        <form action="GET"></form>
+        <form action="#" method="get">
+<!--        Нужен ли label для поиска и для тех же скрин ридеров что бы описать что это за эелемент, хотя в инструменте разработчика указывает что имя = "поиск"
+         И нужна ли кнопка в поиске, если кнопки не будет, будет ли работать поиск при нажатии энтера?)
+         Если тут много нюансов то можешь пропустить этот блок и обсудим его в голосовом
+         Почитав Д27. Все интерактивные элементы имеют текстовое описание.
+         Вовсе сбился что нужно, я могу добавить описание как через скрытый label так и через aria-label
+         что тут сделать?) точнее как будет правильнее?)
+           -->
+          <input name="search" placeholder="Поиск:" type="search">
+          <button type="submit">Поиск</button>
+        </form>
         <a class="button bookmarks" href="#">Закладки: </a>
         <a class="button basket" href="#">Корзина: </a>
         <a class="button checkout" href="#">Оформить заказ</a>
@@ -21,7 +32,7 @@
           строительных материалов
           и инструментов для ремонта
        </h1>
-       <span class="phone-number">+7 (812) 555-05-55</span>
+       <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
        <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
        <ul class="user-navigation">
          <li>
@@ -69,7 +80,6 @@
               <span></span>
             </section>
             <section>
-<!--          Тут я картинку не вставлял, так как считаю что это не контентное изображение а фоновое, ну и пришлось хоть что-то в код вставить что бы сделать комит и пул реквест)    -->
               <h2>Дрели</h2>
               <p>Соседям на радость</p>
               <a class="button" href="catalog.html">Открыть каталог</a>
@@ -210,13 +220,42 @@
             Вы можете забрать товар сами,
             заехав в наш офис:
           </p>
-          <img src="img/map.jpg" width="300" height="158" alt="Карта">
+          <img src="img/map.jpg" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
           <a class="button" href="#">Заблудились? Напишите нам!</a>
         </section>
       </section>
 
+<!--   Карту пока что разметил так, но в будущем хочу сделать нормальной интерактивной картой  -->
+      <section class="map-popup">
+        <button class="cross-close" type="button" aria-label="Закрыть карту">X</button>
+        <a href="https://www.google.com.ua/maps/">
+          <img src="img/large-map.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        </a>
+      </section>
+
       <section class="modal write-us">
-<!--Блок под модальное окно-->
+        <button class="cross-close" type="button" aria-label="Закрыть форму обратной связи">X</button>
+        <form action="#" method="get">
+          <p>
+            <label>
+              Ваше имя:
+              <input type="text" name="name" placeholder="Имя Фамилия">
+            </label>
+            <label>
+              Ваш e-mail:
+              <input type="text" name="email" placeholder="email@example.com">
+            </label>
+          </p>
+          <p>
+            <label>
+              Текст письма:
+              <textarea name="text-of-the-letter" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+            </label>
+          </p>
+          <section class="modal-bottom">
+            <button type="submit">Отправить</button>
+          </section>
+        </form>
       </section>
 
     </main>
@@ -251,9 +290,9 @@
           Все права защищены
         </p>
         <ul class="footer-social">
-          <li><a class="social-button" href="#">Вконтакте</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
+          <li><a class="social-button" href="#" aria-label="Ссылка на группу Вконтакте">Вконтакте</a></li>
+          <li><a class="social-button" href="#" aria-label="Ссылка на группу Фейсбука">Фейсбук</a></li>
+          <li><a class="social-button" href="#" aria-label="Ссылка на группу Инстаграма">Инстаграм</a></li>
         </ul>
         <p class="feedback">
           Обратная связь:
