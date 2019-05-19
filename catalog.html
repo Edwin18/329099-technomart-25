@@ -12,8 +12,9 @@
           <img class="logo" src="img/index-logo.png" width="220" height="47" alt="Техномарт">
         </a>
         <form action="#" method="get">
-          <input name="search" placeholder="Поиск:" type="search">
-          <button type="submit">Поиск</button>
+          <label class="visually-hidden" for="search-form">Поиск</label>
+          <input id="search-form" type="search" name="search" placeholder="Поиск:">
+          <button class="visually-hidden" type="submit">Поиск</button>
         </form>
         <a class="button bookmarks" href="#">Закладки: </a>
         <a class="button basket" href="#">Корзина: </a>
@@ -59,6 +60,13 @@
         <form action="#" method="get">
           <fieldset>
             <legend>Цена:</legend>
+            <button class="value-button min-value" type="button"></button>
+            <button class="value-button max-value" type="button"></button>
+            <div class="bar"></div>
+            <label class="visually-hidden" for="price-min-value">Минимальная цена</label>
+            <label class="visually-hidden" for="price-max-value">Максимальная цена</label>
+            <input id="price-min-value" type="text">
+            <input id="price-max-value" type="text">
           </fieldset>
           <fieldset>
             <legend>Производители:</legend>
@@ -118,19 +126,27 @@
 
       <section class="sort">
         <h3>Сортировка:</h3>
+        <a href="#">По цене</a>
+        <a href="#">По типу</a>
+        <a href="#">По функционалу</a>
+        <button type="button" aria-label="Сортировать каталог по возрастанию"></button>
+        <button type="button" aria-label="Сортировать каталог по убыванию"></button>
       </section>
 
       <section class="catalog">
         <h3>Список товаров</h3>
         <ul class="catalog-list">
+<!--     Мне не обязательно оборачивать содержимое каждого элемента списка в див, я же могу стилизовать li как блок и добавить ему же класс new-item допустим и сделать из него вот эту надпись new в углу? У тебя в примерах есть как сделать new и у тебя там просто один блок а сам new ты рисуешь через class::before   -->
           <li class="catalog-item">
             <img src="img/perforator-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
             <h4>Перфоратор BOSCH BFG 3000</h4>
+            <span class="old-price">22500 Р.</span>
             <b>15500 Р.</b>
           </li>
           <li class="catalog-item">
             <img src="img/perforator-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
             <h4>Перфоратор BOSCH BFG 6000</h4>
+            <span class="old-price">30500 Р.</span>
             <b>25500 Р.</b>
           </li>
           <li class="catalog-item">
@@ -141,11 +157,13 @@
           <li class="catalog-item">
             <img src="img/perforator-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
             <h4>Перфоратор BOSCH BFG 3000</h4>
+            <span class="old-price">22500 Р.</span>
             <b>15500 Р.</b>
           </li>
           <li class="catalog-item">
             <img src="img/perforator-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
             <h4>Перфоратор BOSCH BFG 6000</h4>
+            <span class="old-price">30500 Р.</span>
             <b>25500 Р.</b>
           </li>
           <li class="catalog-item">
@@ -156,11 +174,13 @@
           <li class="catalog-item">
             <img src="img/perforator-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
             <h4>Перфоратор BOSCH BFG 3000</h4>
+            <span class="old-price">22500 Р.</span>
             <b>15500 Р.</b>
           </li>
           <li class="catalog-item">
             <img src="img/perforator-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
             <h4>Перфоратор BOSCH BFG 6000</h4>
+            <span class="old-price">30500 Р.</span>
             <b>25500 Р.</b>
           </li>
           <li class="catalog-item">
@@ -172,9 +192,9 @@
       </section>
       <section class="pagination">
         <ul>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
+          <li><a href="#" aria-label="Первая страница каталога">1</a></li>
+          <li><a href="#" aria-label="Вторая страница каталога">2</a></li>
+          <li><a href="#" aria-label="Третья страница каталога">3</a></li>
           <li><a href="#">Следующая</a></li>
         </ul>
       </section>

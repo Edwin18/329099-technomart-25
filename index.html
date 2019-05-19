@@ -14,7 +14,7 @@
         <form action="#" method="get">
           <label class="visually-hidden" for="search-form">Поиск</label>
           <input id="search-form" type="search" name="search" placeholder="Поиск:">
-          <button type="submit">Поиск</button>
+          <button class="visually-hidden" type="submit">Поиск</button>
         </form>
         <a class="button bookmarks" href="#">Закладки: </a>
         <a class="button basket" href="#">Корзина: </a>
@@ -56,6 +56,7 @@
             <li>
               <h2>Материалы</h2>
               <a class="button button-transparency" href="#">На любой вкус</a>
+              <div class="new"></div>
             </li>
             <li>
               <h2>Инструменты</h2>
@@ -70,8 +71,8 @@
         <section class="advantages-bottom">
           <section class="advantages-bottom-slider">
             <section class="arrows">
-              <span></span>
-              <span></span>
+              <button class="slider-button button-left" type="button" aria-label="Предыдущий слайд"></button>
+              <button class="slider-button button-right" type="button" aria-label="Следующий слайд"></button>
             </section>
             <section>
               <h2>Дрели</h2>
@@ -84,8 +85,10 @@
               <a class="button" href="catalog.html">Открыть каталог</a>
             </section>
             <section class="radio">
-              <input type="radio" name="slider">
-              <input type="radio" name="slider">
+              <label class="visually-hidden" for="first-slide">Первый слайд</label>
+              <label class="visually-hidden" for="second-slide">Второй слайд</label>
+              <input type="radio" id="first-slide" name="slider">
+              <input type="radio" id="second-slide" name="slider">
             </section>
           </section>
           <ul>
@@ -110,22 +113,27 @@
           <li class="catalog-item">
             <img src="img/perforator-2.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
             <h4>Перфоратор BOSCH BFG 9000</h4>
+<!--      Я выделил старые цена спаном, это верно или лучше див? Так как ты говорила что спаном выделяется текст в тексте.      -->
+            <span class="old-price">32500 Р.</span>
             <b>25500 Р.</b>
           </li>
           <li class="catalog-item">
             <img src="img/perforator-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
             <h4>Перфоратор BOSCH BFG 3000</h4>
+            <span class="old-price">22500 Р.</span>
             <b>15500 Р.</b>
           </li>
           <li class="catalog-item">
             <img src="img/perforator-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
             <h4>Перфоратор BOSCH BFG 6000</h4>
+            <span class="old-price">30500 Р.</span>
             <b>25500 Р.</b>
           </li>
           <li class="catalog-item">
             <img src="img/perforator-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
             <h4>Перфоратор BOSCH BFG 2000</h4>
             <b>12500 Р.</b>
+            <div class="new"></div>
           </li>
         </ul>
       </section>
