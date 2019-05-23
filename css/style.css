@@ -11,120 +11,49 @@ a {
   text-decoration: none;
 }
 
-.button {
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
+.list-style-none {
+  list-style: none;
 }
 
-/*BACKGROUND-COLOR*/
+.modal,
+.warranty,
+.credit {
+  display: none;
+}
 
-/*red*/
-.button-red,
-.catalog b,
-.popular-goods b {
+.button {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 18px;
+
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  border: none;
+}
+
+.button-red {
+  color: #ffffff;
+
   background-color: #ee3643;
 }
 
-/*green*/
-.checkout {
-  background-color: #63a63e;
+.button-red:hover {
+  background-color: #ca2c37;
 }
 
-/*dark blue*/
-.main-nav-list li,
-.services-list li,
-.main-footer {
-  background-color: #32425c;
+.button-red:active {
+  background-color: #ba2732;
 }
 
-/*white*/
-.filter button,
-.pagination a {
-  background-color: #ffffff;
-}
-
-/*white ver.2*/
-.main-header,
-.services,
-.catalog header,
-article.about {
-  background-color: #f4f8f9;
-}
-
-/*white ver.3*/
-.header-popular {
-  background-color: #f9f5f0;
-}
-
-/*COLOR*/
-
-/*gold*/
-.main-footer-middle a,
-.main-footer-bottom a {
-  color: #ffd180;
-}
-
-/*white*/
-.main-header-top a,
-.main-nav-list a,
-.main-footer-top a,
-.advantages-list h2,
-.advantages-bottom-slider h2,
-.advantages-bottom-slider p,
-.popular-goods-item b,
-.services .services-item,
-.main-footer p,
-.catalog-item b,
-.button {
-  color: #ffffff;
-}
-
-/*black*/
-.user-navigation-authorization a,
-.user-navigation-logined .user,
-.services-top h2,
-.services p,
-.company-contaсts h2,
-.company-contaсts p,
-.filter[type=submit],
-.breadcrumbs a,
-.pagination a {
-  color: #000000;
-}
-
-/*grey*/
-.popular-goods-item del,
-.catalog-item del {
-  color: #a9a9a9;
-}
-
-/*red*/
-.main-header-middle h1,
-.phone-number,
-.sort .active {
-  color: #ee3643;
-}
-
-/*dark blue*/
-.main-header-middle .adress,
-.personal-area a,
-.header-popular h2,
-.catalog h2,
-.about h3,
-.services-list li:nth-child(3),
-.services-bottom-slider h2 {
-  color: #32425c;
-}
 /*------------------Header------------------*/
 
 .main-header {
   font-size: 17px;
   line-height: 17px;
-}
 
-.list-style-none {
-  list-style: none;
+  background-color: #f4f8f9;
 }
 
 .main-header-top {
@@ -133,10 +62,41 @@ article.about {
   background-color: #293449;
 }
 
+.main-header-top a {
+  color: #ffffff;
+}
+
+.main-header-top .bookmarks:hover,
+.main-header-top .basket:hover {
+  background-color: #212a3a;
+}
+
+.main-header-top .bookmarks:active,
+.main-header-top .basket:active {
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: #161d29;
+}
+
+.main-header-top .checkout {
+  background-color: #63a63e;
+}
+
+.main-header-top .checkout:hover {
+  background-color: #5fbb2d;
+}
+
+.main-header-top .checkout:active {
+  color: rgba(255, 255, 255, 0.5);
+
+  background-color: #518534;
+}
+
 .main-header-middle h1 {
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
+  color: #ee3643;
 }
 
 .phone-number,
@@ -146,20 +106,62 @@ article.about {
   line-height: 21px;
 }
 
-.main-header-middle .adress {
-  font-size: 14px;
-  line-height: 24px;
+.phone-number {
+  color: #ee3643;
 }
 
 .authorization-button,
 .user-navigation-logined .user {
+  color: #000000;
+
   background-color: #ffffff;
 }
 
 .personal-area a {
   font-size: 16px;
   line-height: 18px;
+  color: #32425c;
   text-decoration: underline;
+}
+
+.phone-number:hover {
+  color: #ca2c37;
+}
+
+.phone-number:active {
+  color: #ba2732;
+}
+
+.user-navigation-authorization a:hover,
+.personal-area a:hover {
+  color: #ee3643;
+}
+
+.user-navigation-authorization a:active,
+.personal-area a:active,
+.user-navigation-logined .user:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.main-header-middle .adress {
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425c;
+}
+
+.main-nav-list a {
+  color: #ffffff;
+  background-color: #32425c;
+}
+
+.main-nav-list a:hover {
+  background-color: #293449;
+}
+
+.main-nav-list a:active {
+  color: rgba(255, 255, 255, 0.5);
+
+  background-color: #1d2739;
 }
 
 /*------------------Main------------------*/
@@ -169,6 +171,21 @@ article.about {
 .advantages-list h2 {
   font-size: 24px;
   line-height: 30px;
+  color: #ffffff;
+}
+
+.advantages-list a {
+  color: #ffffff;
+
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.advantages-list a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.advantages-list a:active {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .advantages-list .materials {
@@ -191,19 +208,17 @@ article.about {
   background-color: #ffc047;
 }
 
-.button-transparency {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
 .advantages-bottom-slider h2 {
   font-size: 36px;
   line-height: 36px;
+  color: #ffffff;
   text-transform: uppercase;
 }
 
 .advantages-bottom-slider p {
   font-size: 18px;
   line-height: 24px;
+  color: #ffffff;
 }
 
 .advantages-bottom-slider .slider-1 {
@@ -218,13 +233,14 @@ article.about {
 
 /*popular*/
 
-.header-popular h2,
-.services-top h2,
-.company-contaсts h2,
-.catalog h2,
-.about h3 {
+.header-popular {
+  background-color: #f9f5f0;
+}
+
+.header-popular h2 {
   font-size: 30px;
   line-height: 30px;
+  color: #32425c;
   text-transform: uppercase;
 }
 
@@ -238,6 +254,7 @@ article.about {
 .catalog-item h4 {
   font-size: 18px;
   line-height: 20px;
+  color: #000000;
 }
 
 .popular-goods-item b,
@@ -248,7 +265,31 @@ article.about {
   line-height: 18px;
 }
 
+.popular-goods-item del,
+.catalog-item del {
+  color: #a9a9a9;
+}
+
+.popular-goods-item b,
+.catalog-item b {
+  color: #ffffff;
+
+  background-color: #ee3643;
+}
+
 /*services*/
+
+.services {
+  background-color: #f4f8f9;
+}
+
+.services-top h2,
+.company-contaсts h2 {
+  font-size: 30px;
+  line-height: 30px;
+  color: #000000;
+  text-transform: uppercase;
+}
 
 .services p,
 .company-contaсts p,
@@ -261,15 +302,21 @@ article.about {
 .services-list li {
   font-size: 21px;
   line-height: 30px;
+  color: #ffffff;
+
+  background-color: #32425c;
 }
 
-.services-list li:nth-child(3) {
+.services-list li:nth-child(1) {
+  color: #32425c;
+
   background-color: #ffffff;
 }
 
 .services-bottom-slider h2 {
   font-size: 36px;
   line-height: 24px;
+  color: #32425c;
   text-transform: uppercase;
 }
 /*company-contaсts*/
@@ -279,17 +326,58 @@ article.about {
   line-height: 20px;
 }
 
-.filter[type=submit] {
+/*------------------Footer------------------*/
 
+.main-footer {
+  background-color: #32425c;
 }
 
-/*------------------Footer------------------*/
+.main-footer p,
+.main-footer-nav a {
+  color: #ffffff;
+}
+
+.main-footer-middle a,
+.main-footer-bottom a {
+  color: #ffd180;
+}
 
 .main-footer-bottom {
   background-color: #293449;
 }
 
+.main-footer a:hover {
+  text-decoration: underline;
+}
+
+.main-footer-top a:active {
+  color: rgba(241, 245, 247, 0.5);
+  text-decoration: none;
+}
+
+.main-footer-middle a:active {
+  color: rgba(255, 209, 128, 0.5);
+  text-decoration: none;
+}
+
+.feedback a:active,
+.footer-copyright a:active {
+  color: #ee3643;
+  text-decoration: none;
+}
+
 /*catalog.html*/
+
+.catalog-header {
+  background-color: #f4f8f9;
+}
+
+.catalog-header h2 {
+  font-size: 30px;
+  line-height: 30px;
+  color: #32425c;
+  text-transform: uppercase;
+}
 
 /*breadcrumbs*/
 
@@ -297,12 +385,12 @@ article.about {
 .breadcrumbs a {
   font-size: 13px;
   line-height: 18px;
+  color: #000000;
+  text-transform: uppercase;
 }
 
-.catalog header {
-  font-size: 30px;
-}
 
+/*
 .filter,
 .sort {
   font-family: "PT Sans", "Arial", sans-serif;
@@ -339,13 +427,43 @@ article.about {
 
 .sort .active {
   border-bottom: none;
+}*/
+
+.pagination a {
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
 }
 
-.pagination .active-button-red {
+.pagination .active {
   color: #ffffff;
+
   background-color: #ee3643;
 }
 
-.modal {
-  display: none;
+.pagination a:hover {
+  color: #000000;
+
+  background-color: #ffffff;
+  border: 1px solid #bdc6ca;
+}
+
+.pagination a:active {
+  color: #000000;
+
+  background-color: #ffffff;
+  border: 1px solid #ee3643;
+}
+
+.about {
+  background-color: #f4f8f9;
+}
+
+.about h3 {
+  font-size: 30px;
+  line-height: 30px;
+  color: #000000;
+  text-transform: uppercase;
 }
