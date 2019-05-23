@@ -389,19 +389,11 @@ a {
   text-transform: uppercase;
 }
 
+/*Filter*/
 
-/*
-.filter,
-.sort {
+.filter {
   font-family: "PT Sans", "Arial", sans-serif;
-  text-transform: uppercase;
-}
-
-.filter h3,
-.sort h3,
-.sort a {
-  font-size: 13px;
-  line-height: 18px;
+  color: #000000;
 }
 
 .filter legend {
@@ -410,24 +402,16 @@ a {
   font-weight: bold;
 }
 
-.filter label {
+.filter-option label {
   font-size: 15px;
   line-height: 20px;
+  text-transform: uppercase;
 }
 
-.filter button {
-  color: #000000;
+.filter-submit-button {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
 }
-
-.sort a {
-  color: rgba(0, 0, 0, 0.3);
-
-  border-bottom: 1px dashed #ee3643;
-}
-
-.sort .active {
-  border-bottom: none;
-}*/
 
 .pagination a {
   color: #000000;
