@@ -69,8 +69,6 @@ a {
 }
 
 .header {
-  margin-bottom: 60px;
-
   background-color: #f4f8f9;
 }
 
@@ -171,7 +169,7 @@ a {
   color: #ee3643;
 }
 
-.adress {
+.header-adress {
   margin-right: auto;
   margin-left: auto;
 
@@ -182,6 +180,17 @@ a {
 
 .user-auth {
   margin-left: auto;
+}
+
+.user-auth-logined {
+  display: flex;
+}
+
+.user-auth-logined__link {
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: underline;
+  color: #32425c;
 }
 
 .user-auth__button {
@@ -196,12 +205,12 @@ a {
   margin-left: 10px;
 }
 
-.main-nav-list {
+.main-nav-header {
   display: flex;
   margin-bottom: 60px;
 }
 
-.main-nav-list__link {
+.main-nav-header__link {
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;
@@ -218,6 +227,7 @@ a {
 .advantages {
   display: flex;
   flex-direction: column;
+  margin-top: 60px;
   margin-bottom: 53px;
 }
 
@@ -480,10 +490,92 @@ a {
 
 .company-contaсts {
   display: flex;
+  margin-bottom: 85px;
 }
 
 .transport-companies-item {
   font-size: 18px;
   line-height: 20px;
   color: #000000;
+}
+
+/*------------------Footer------------------*/
+
+.main-footer {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #32425c;
+}
+
+.main-footer-top {
+  display: flex;
+}
+
+.main-nav-footer {
+  display: flex;
+  margin-left: auto;
+}
+
+.main-nav-footer__link {
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.main-footer-middle {
+  display: flex;
+}
+
+.footer-adress {
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.main-range-footer {
+  display: flex;
+  margin-left: auto;
+}
+
+.main-range-footer__link {
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffd180;
+}
+
+.footer-bottom-wrapper {
+  font-size: 16px;
+  line-height: 18px;
+
+  background-color: #293449;
+}
+
+.main-footer-bottom {
+  display: flex;
+}
+
+.rights {
+
+  color: #ffffff;
+}
+
+.footer-social {
+  display: flex;
+}
+
+.feedback {
+  color: #ffffff;
+}
+
+.feedback__link {
+  color: #ffd180;
+}
+
+.copyright {
+  color: #ffffff;
+}
+
+.copyright__link {
+  color: #ffd180;
 }

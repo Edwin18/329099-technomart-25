@@ -13,7 +13,7 @@
         <div class="header-nav-top-wrapper">
           <div class="display-flex container">
             <a class="main-header-logo" href="index.html">
-              <img class="logo" src="img/index-logo.png" width="220" height="47" alt="Техномарт">
+              <img class="header-logo" src="img/index-logo.png" width="220" height="47" alt="Техномарт">
             </a>
             <form class="search-form" action="#" method="get">
               <label class="visually-hidden" for="search">Поиск</label>
@@ -35,7 +35,7 @@
             <div class="phone-number-wrapper">
               <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
             </div>
-            <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+            <p class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
           <ul class="user-auth display-flex list-style-none">
             <li>
@@ -47,14 +47,14 @@
           </ul>
         </div>
         <div class="container">
-           <ul class="main-nav-list list-style-none">
-               <li><a class="main-nav-list__link" href="#">Главная</a></li>
-               <li><a class="main-nav-list__link" href="#">Компания</a></li>
-               <li><a class="main-nav-list__link" href="#">Каталог</a></li>
-               <li><a class="main-nav-list__link" href="#">Новости</a></li>
-               <li><a class="main-nav-list__link" href="#">Спецпредложения</a></li>
-               <li><a class="main-nav-list__link" href="#">Доставка</a></li>
-               <li><a class="main-nav-list__link" href="#">Контакты</a></li>
+           <ul class="main-nav-header list-style-none">
+               <li><a class="main-nav-header__link" href="#">Главная</a></li>
+               <li><a class="main-nav-header__link" href="#">Компания</a></li>
+               <li><a class="main-nav-header__link" href="#">Каталог</a></li>
+               <li><a class="main-nav-header__link" href="#">Новости</a></li>
+               <li><a class="main-nav-header__link" href="#">Спецпредложения</a></li>
+               <li><a class="main-nav-header__link" href="#">Доставка</a></li>
+               <li><a class="main-nav-header__link" href="#">Контакты</a></li>
            </ul>
         </div>
       </nav>
@@ -279,49 +279,51 @@
 
 
     <footer class="main-footer">
-      <section class="main-footer-top">
-        <a class="main-footer-logo" href="index.html">
-          <img class="logo" src="img/footer-logo.png" width="220" height="68" alt="Техномарт">
-        </a>
-        <ul class="main-footer-nav list-style-none">
-          <li><a href="#">Компания</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Каталог</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-      </section>
-      <section class="main-footer-middle">
-        <p class="footer-contacts">
-          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
-          +7 (812) 555-05-55
-        </p>
-        <ul class="main-footer-range list-style-none">
-          <li><a href="#">Материалы</a></li>
-          <li><a href="#">Техника</a></li>
-          <li><a href="#">Инструменты</a></li>
-          <li><a href="#">Спецпредложения</a></li>
-        </ul>
-      </section>
-      <section class="main-footer-bottom">
-        <p>
-          © 2010–2019 Компания «Техномарт» <br>
-          Все права защищены
-        </p>
-        <ul class="footer-social list-style-none">
-          <li><a class="social-button" href="#" aria-label="Ссылка на группу Вконтакте">Вконтакте</a></li>
-          <li><a class="social-button" href="#" aria-label="Ссылка на группу Фейсбука">Фейсбук</a></li>
-          <li><a class="social-button" href="#" aria-label="Ссылка на группу Инстаграма">Инстаграм</a></li>
-        </ul>
-        <p class="feedback">
-          Обратная связь:
-          <a href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </p>
-        <p class="footer-copyright">
-          Разработано —
-          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-        </p>
-      </section>
+        <section class="main-footer-top container">
+          <a class="main-footer-logo" href="index.html">
+            <img class="footer-logo" src="img/footer-logo.png" width="220" height="68" alt="Техномарт">
+          </a>
+          <ul class="main-nav-footer list-style-none">
+            <li><a class="main-nav-footer__link" href="#">Компания</a></li>
+            <li><a class="main-nav-footer__link" href="#">Новости</a></li>
+            <li><a class="main-nav-footer__link" href="#">Каталог</a></li>
+            <li><a class="main-nav-footer__link" href="#">Доставка</a></li>
+            <li><a class="main-nav-footer__link" href="#">Контакты</a></li>
+          </ul>
+        </section>
+        <section class="main-footer-middle container">
+          <p class="footer-adress">
+            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
+            +7 (812) 555-05-55
+          </p>
+          <ul class="main-range-footer list-style-none">
+            <li><a class="main-range-footer__link" href="#">Материалы</a></li>
+            <li><a class="main-range-footer__link" href="#">Техника</a></li>
+            <li><a class="main-range-footer__link" href="#">Инструменты</a></li>
+            <li><a class="main-range-footer__link" href="#">Спецпредложения</a></li>
+          </ul>
+        </section>
+      <div class="footer-bottom-wrapper">
+        <section class="main-footer-bottom container">
+          <p class="rights">
+            © 2010–2019 Компания «Техномарт» <br>
+            Все права защищены
+          </p>
+          <ul class="footer-social list-style-none">
+            <li><a class="footer-social__button vkontakte-button" href="#" aria-label="Ссылка на группу Вконтакте">Вконтакте</a></li>
+            <li><a class="footer-social__button facebook-button" href="#" aria-label="Ссылка на группу Фейсбука">Фейсбук</a></li>
+            <li><a class="footer-social__button instagram-button" href="#" aria-label="Ссылка на группу Инстаграма">Инстаграм</a></li>
+          </ul>
+          <p class="feedback">
+            Обратная связь:
+            <a class="feedback__link" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </p>
+          <p class="copyright">
+            Разработано —
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+          </p>
+        </section>
+      </div>
     </footer>
   </body>
 </html>
