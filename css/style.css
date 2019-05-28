@@ -43,17 +43,17 @@ a {
   border: none;
 }
 
-.button_theme_red {
+.button-theme_red {
   color: #ffffff;
 
   background-color: #ee3643;
 }
 
-.button_theme_red:hover {
+.button-theme_red:hover {
   background-color: #ca2c37;
 }
 
-.button_theme_red:active {
+.button-theme_red:active {
   background-color: #ba2732;
 }
 
@@ -64,29 +64,37 @@ a {
   padding: 0 10px;
 }
 
-.display-flex {
-  display: flex;
-}
-
 .header {
+  display: flex;
+  flex-direction: column;
+
   background-color: #f4f8f9;
 }
 
-.header-nav {
-  display: flex;
-  flex-direction: column;
-}
-
-.header-nav-top-wrapper {
-  margin-bottom: 45px;
+.header-top-wrapper {
+  margin-bottom: 46px;
 
   background-color: #293449;
 }
 
+.header-top-container {
+  position: relative;
+
+  display: flex;
+}
+
+.main-header-logo {
+  position: absolute;
+}
+
 .search-form {
+  flex-grow: 1;
   margin-top: auto;
   margin-bottom: auto;
-  margin-left: 20px;
+  margin-left: 220px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 49px;
 }
 
 .search-form__input {
@@ -98,30 +106,109 @@ a {
   border: none;
 }
 
+.search-form__input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.search-form__input::-moz-placeholder {
+  color: #ffffff;
+}
+
 .bookmarks {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: auto;
+  position: relative;
+
+  padding-top: 11px;
+  padding-right: 28px;
+  padding-bottom: 11px;
+  padding-left: 44px;
 
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
+}
+
+.bookmarks::before {
+  content: "";
+
+  position: absolute;
+  left: 17px;
+
+  width: 14px;
+  height: 16px;
+
+  background-image: url("../img/svg/icon-bookmarks.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.3;
+}
+
+.bookmarks:hover {
+  background-color: #212a3a;
+}
+
+.bookmarks:active {
+  background-color: #161d29;
+}
+
+.bookmarks:hover::before {
+  opacity: 1;
+}
+
+.bookmarks:active::before {
+  opacity: 0.5;
 }
 
 .basket {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 10px;
+  position: relative;
+
+  padding-top: 11px;
+  padding-right: 28px;
+  padding-bottom: 11px;
+  padding-left: 44px;
 
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
 }
 
+.basket::before {
+  content: "";
+
+  position: absolute;
+  left: 18px;
+
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../img/svg/icon-basket.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.3;
+}
+
+.basket:hover {
+  background-color: #212a3a;
+}
+
+.basket:active {
+  background-color: #161d29;
+}
+
+.basket:hover::before {
+  opacity: 1;
+}
+
+.basket:active::before {
+  opacity: 0.5;
+}
+
 .checkout {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 10px;
+  padding-top: 11px;
+  padding-right: 20px;
+  padding-bottom: 11px;
+  padding-left: 20px;
 
   font-size: 17px;
   line-height: 18px;
@@ -130,13 +217,23 @@ a {
   background-color: #63a63e;
 }
 
-.header-nav-middle-wrapper {
+.checkout:hover {
+  background-color: #5fbb2d;
+}
+
+.checkout:active {
+  color: rgba(255, 255, 255, 0.5);
+
+  background-color: #518534;
+}
+
+.header-middle-wrapper {
   display: flex;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 }
 
 .main-title {
-  width: 200px;
+/*  min-width: 195px;*/
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
@@ -145,32 +242,59 @@ a {
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
+  font-weight: 100;
   color: #ee3643;
 }
 
 .adress-wrapper {
   display: flex;
   flex-direction: column;
-  width: 270px;
+  min-width: 270px;
   margin-left: 70px;
 }
 
-.phone-number-wrapper {
-  display: flex;
+.phone-number {
+  position: relative;
+
+  padding-top: 9px;
+  padding-right: 42px;
+  padding-bottom: 9px;
+  padding-left: 71px;
+
+  font-size: 21px;
+  line-height: 21px;
+  color: #ee3643;
 
   background-color: #f4f8f9;
   border: 3px solid #ffffff;
 }
 
-.phone-number {
-  margin: auto;
-  font-size: 21px;
-  line-height: 21px;
-  color: #ee3643;
+.phone-number::before {
+  content: "";
+
+  position: absolute;
+  left: 12px;
+
+  width: 19px;
+  height: 19px;
+
+  background-image: url("../img/svg/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.phone-number:hover {
+  border-color: #212a3a;
+}
+
+.phone-number:active {
+  border-color: #161d29;
 }
 
 .header-adress {
+  margin-top: 4px;
   margin-right: auto;
+  margin-bottom: 0;
   margin-left: auto;
 
   font-size: 14px;
@@ -179,6 +303,7 @@ a {
 }
 
 .user-auth {
+  display: flex;
   margin-left: auto;
 }
 
@@ -194,6 +319,10 @@ a {
 }
 
 .user-auth__button {
+  display: flex;
+  padding-top: 11px;
+  padding-bottom: 11px;
+
   font-size: 21px;
   line-height: 21px;
   color: #000000;
@@ -201,22 +330,71 @@ a {
   background-color: #ffffff;
 }
 
+.user-auth__button:hover {
+  color: #ee3643;
+}
+
+.user-auth__button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.user-auth__button_login {
+  position: relative;
+
+  padding-right: 27px;
+  padding-left: 48px;
+}
+
+.user-auth__button_login svg {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+}
+
+.user-auth__button_login:hover path {
+  fill: #32425c;
+}
+
+.user-auth__button_login:active path {
+  fill: #c5c5c5;
+}
+
 .user-auth__button_registration {
   margin-left: 10px;
+  padding-right: 25px;
+  padding-left: 25px;
 }
 
 .main-nav-header {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 60px;
 }
 
 .main-nav-header__link {
+  display: inline-block;
+  margin: 0;
+  padding-top: 21px;
+  padding-right: 33px;
+  padding-bottom: 21px;
+  padding-left: 34px;
+
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;
 
   background-color: #32425c;
   box-shadow: inset 0 -5px 0 0 #293449;
+}
+
+.main-nav-header__link:hover {
+  background-color: #293449;
+}
+
+.main-nav-header__link:active {
+  color: rgba(255, 255, 255, 0.5);
+
+  background-color: #1d2739;
 }
 
 
@@ -238,12 +416,16 @@ a {
 }
 
 .advantages-items {
+  display: flex;
+  flex-direction: column;
   min-width: 300px;
   min-height: 125px;
 }
 
 .advantages-items__title {
   margin: 0;
+  margin-top: 23px;
+  margin-left: 23px;
 
   font-size: 24px;
   line-height: 30px;
@@ -252,31 +434,55 @@ a {
 }
 
 .advantages-items__button {
+  min-width: 135px;
+  margin-top: 13px;
+  margin-right: auto;
+  margin-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
   color: #ffffff;
 
   background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
 }
 
 .materials {
   background-color: #ffbf47;
+  background-image: url("../img/svg/materials.svg");
+/* я сделал так честно не зная на что опирался при выборе данного способа но он не очень хороший, если я сделаю эти иконки через бифор или афтер, можно так? Ну то есть нет никаких там запретов или еще чего-то? Просто через бифор я смогу более точно выставить элемент */
+  background-repeat: no-repeat;
+  background-position: 83%, 50%;
 }
 
 .instruments {
   background-color: #3bbce3;
+  background-image: url("../img/svg/instruments.svg");
+  background-repeat: no-repeat;
+  background-position: 83%, 50%;
 }
 
 .equipment {
   background-color: #dc91d8;
+  background-image: url("../img/svg/equipment.svg");
+  background-repeat: no-repeat;
+  background-position: 83%, 50%;
 }
 
 .discounts {
   margin-bottom: 20px;
 
   background-color: #8ed78f;
+  background-image: url("../img/svg/discounts.svg");
+  background-repeat: no-repeat;
+  background-position: 83%, 50%;
 }
 
 .delivery {
   background-color: #ffc047;
+  background-image: url("../img/svg/delivery.svg");
+  background-repeat: no-repeat;
+  background-position: 83%, 50%;
 }
 
 .advantages-bottom-wrapper {
@@ -291,13 +497,13 @@ a {
   color: #ffffff;
 }
 
-.slider-1 {
-  background-image: url("../img/slider-1.jpg");
+.slide_drills {
+  background-image: url("../img/slide-drills.jpg");
   background-size: cover;
 }
 
-.slider-2 {
-  background-image: url("../img/slider-2.jpg");
+.slide_perforators {
+  background-image: url("../img/slide-perforators.jpg");
   background-size: cover;
 }
 
@@ -399,6 +605,7 @@ a {
 
 .popular-manufacturers-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 20px;
 }
@@ -407,6 +614,7 @@ a {
   display: flex;
   width: 220px;
   height: 145px;
+  margin-bottom: 20px;
 
   border: 1px solid #eaeaea;
 }
@@ -420,7 +628,7 @@ a {
 .services {
   display: flex;
   flex-direction: column;
-  margin-top: 85px;
+  margin-top: 65px;
   margin-bottom: 82px;
 
   background-color: #f4f8f9;
@@ -471,7 +679,7 @@ a {
   background-color: #32425c;
 }
 
-.service-active {
+.services-item_active {
   color: #32425c;
 
   background-color: #ffffff;
@@ -556,7 +764,6 @@ a {
 }
 
 .rights {
-
   color: #ffffff;
 }
 
@@ -579,3 +786,5 @@ a {
 .copyright__link {
   color: #ffd180;
 }
+
+

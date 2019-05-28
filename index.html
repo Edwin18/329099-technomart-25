@@ -9,14 +9,14 @@
   </head>
   <body>
     <header class="header">
-      <nav class="header-nav">
-        <div class="header-nav-top-wrapper">
-          <div class="display-flex container">
+        <div class="header-top-wrapper">
+          <div class="header-top-container container">
             <a class="main-header-logo" href="index.html">
               <img class="header-logo" src="img/index-logo.png" width="220" height="47" alt="Техномарт">
             </a>
             <form class="search-form" action="#" method="get">
               <label class="visually-hidden" for="search">Поиск</label>
+<!--            Я перекрасил Placeholder в белый так как на макете или это было лишнее и можно было просто вставить value="Поиск:"?  еще хотел обсудить о иконке поиска я ее могу заинлайнить или сделать беграундом, как будет лучше? и само поле поиска высота ширина ктивная облась и т.д.))  -->
               <input class="search-form__input" id="search" type="search" name="search" placeholder="Поиск:">
               <button class="visually-hidden" type="submit">Поиск</button>
             </form>
@@ -25,28 +25,29 @@
             <a class="checkout" href="#">Оформить заказ</a>
           </div>
         </div>
-        <div class="header-nav-middle-wrapper container">
+        <div class="header-middle-wrapper container">
           <h1 class="main-title">
-            Интернет-магазин
-            строительных материалов
+            Интернет-магазин <br>
+            строительных материалов <br>
             и инструментов для ремонта
           </h1>
           <div class="adress-wrapper">
-            <div class="phone-number-wrapper">
-              <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
-            </div>
+            <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
             <p class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
-          <ul class="user-auth display-flex list-style-none">
+          <ul class="user-auth list-style-none">
             <li>
-               <a class="user-auth__button user-auth__button_login" href="#">Войти</a>
+               <a class="user-auth__button user-auth__button_login" href="#">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17"><path fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z"/><path fill="#c5c5c5" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"/></svg>
+                 Войти
+               </a>
             </li>
             <li>
                <a class="user-auth__button user-auth__button_registration" href="#">Регистрация</a>
             </li>
           </ul>
         </div>
-        <div class="container">
+        <nav class="container">
            <ul class="main-nav-header list-style-none">
                <li><a class="main-nav-header__link" href="#">Главная</a></li>
                <li><a class="main-nav-header__link" href="#">Компания</a></li>
@@ -56,8 +57,7 @@
                <li><a class="main-nav-header__link" href="#">Доставка</a></li>
                <li><a class="main-nav-header__link" href="#">Контакты</a></li>
            </ul>
-        </div>
-      </nav>
+        </nav>
     </header>
 
 
@@ -70,7 +70,7 @@
             <a class="advantages-items__button button" href="#">На любой вкус</a>
           </li>
           <li class="advantages-items instruments">
-            <h2 class="advantages-items__title">Инструменты</h2>
+            <h2 class="advantages-items__title">Инструмент</h2>
             <a class="advantages-items__button button" href="#">На все случаи</a>
           </li>
           <li class="advantages-items equipment">
@@ -81,18 +81,18 @@
         <div class="advantages-bottom-wrapper">
           <section class="advantages-bottom-slider">
             <section class="arrows visually-hidden">
-              <button class="slider-button button-left" type="button" aria-label="Предыдущий слайд"></button>
-              <button class="slider-button button-right" type="button" aria-label="Следующий слайд"></button>
+              <button class="slider-button slider-button_left" type="button" aria-label="Предыдущий слайд"></button>
+              <button class="slider-button slider-button_right" type="button" aria-label="Следующий слайд"></button>
             </section>
-            <section class="slide slider-1 visually-hidden">
+            <section class="slide slide_drills visually-hidden">
               <h2 class="slide__title">Дрели</h2>
               <p class="slide__text">Соседям на радость</p>
-              <a class="slide__button button button_theme_red" href="catalog.html">Открыть каталог</a>
+              <a class="slide__button button button-theme_red" href="catalog.html">Открыть каталог</a>
             </section>
-            <section class="slide slider-2">
+            <section class="slide slide_perforators">
               <h2 class="slide__title">Перфораторы</h2>
               <p class="slide__text">Настоящие мужские игрушки</p>
-              <a class="slide__button button button_theme_red" href="catalog.html">Открыть каталог</a>
+              <a class="slide__button button button-theme_red" href="catalog.html">Открыть каталог</a>
             </section>
             <section class="radio visually-hidden">
               <label class="visually-hidden" for="first-slide">Первый слайд</label>
@@ -118,7 +118,7 @@
       <section class="popular-goods">
         <header class="header-popular">
           <h2 class="header-popular__title">Популярные товары:</h2>
-          <a class="header-popular__button button button_theme_red" href="#">Все популярные товары</a>
+          <a class="header-popular__button button button-theme_red" href="#">Все популярные товары</a>
         </header>
         <ul class="popular-goods-list list-style-none">
           <li class="catalog-item">
@@ -151,15 +151,13 @@
       <section class="popular-manufacturers">
         <header class="header-popular">
           <h2 class="header-popular__title">Популярные производители:</h2>
-          <a class="header-popular__button button button_theme_red" href="#">Все производители</a>
+          <a class="header-popular__button button button-theme_red" href="#">Все производители</a>
         </header>
         <ul class="popular-manufacturers-list list-style-none">
           <li class="popular-manufacturers-item"><a class="popular-manufacturers-item__link" href="#"><img src="img/bosch.png" width="126" height="37" alt="BOSCH"></a></li>
           <li class="popular-manufacturers-item"><a class="popular-manufacturers-item__link" href="#"><img src="img/makita.png" width="123" height="40" alt="Makita"></a></li>
           <li class="popular-manufacturers-item"><a class="popular-manufacturers-item__link" href="#"><img src="img/dewalt.png" width="146" height="44" alt="DeWALT"></a></li>
           <li class="popular-manufacturers-item"><a class="popular-manufacturers-item__link" href="#"><img src="img/interscop.png" width="200" height="88" alt="Интерскоп"></a></li>
-        </ul>
-        <ul class="popular-manufacturers-list list-style-none">
           <li class="popular-manufacturers-item"><a class="popular-manufacturers-item__link" href="#"><img src="img/hitachi.png" width="169" height="31" alt="HITACHI"></a></li>
           <li class="popular-manufacturers-item"><a class="popular-manufacturers-item__link" href="#"><img src="img/lg.png" width="121" height="73" alt="LG"></a></li>
           <li class="popular-manufacturers-item"><a class="popular-manufacturers-item__link" href="#"><img src="img/aeg.png" width="151" height="96" alt="AEG"></a></li>
@@ -178,12 +176,12 @@
         </header>
         <section class="services-bottom">
           <ul class="services-list list-style-none">
-            <li class="services-item delivery-service service-active">Доставка</li>
-            <li class="services-item warranty-service">Гарантия</li>
-            <li class="services-item credit-service">Кредит</li>
+            <li class="services-item services-item_delivery services-item_active">Доставка</li>
+            <li class="services-item services-item_service">Гарантия</li>
+            <li class="services-item services-item_service">Кредит</li>
           </ul>
           <section class="services-bottom-slider">
-            <section class="services-slide delivery-slide">
+            <section class="services-slide services-slide_delivery">
               <h2 class="services-slide__title">Доставка</h2>
               <p class="services-slide__text pt-sans-small">
                 Мы с удовольствием доставим ваш товар прямо
@@ -192,7 +190,7 @@
                 поднимая его на ваш этаж!
               </p>
             </section>
-            <section class="services-slide warranty-slide">
+            <section class="services-slide services-slide_warranty">
               <h2 class="services-slide__title">Гарантия</h2>
               <p class="services-slide__text pt-sans-small">
                 Если купленный у нас товар поломается или заискрит,
@@ -200,13 +198,13 @@
                 Дом уж восстановите как-нибудь сами.
               </p>
             </section>
-            <section class="services-slide credit-slide">
+            <section class="services-slide services-slide_credit">
               <h2 class="services-slide__title">Кредит</h2>
               <p class="services-slide__text pt-sans-small">
                 Залезть в долговую яму стало проще!
                 Кредитные консультанты придут вам на помощь.
               </p>
-              <a class="services-slide__button button button_theme_red" href="#">ОТПРАВИТЬ ЗАЯВКУ</a>
+              <a class="services-slide__button button button-theme_red" href="#">ОТПРАВИТЬ ЗАЯВКУ</a>
             </section>
           </section>
         </section>
@@ -228,7 +226,7 @@
             <li class="transport-companies-item">Автотрейдинг</li>
             <li class="transport-companies-item">ЖелДорЭкспедиция</li>
           </ul>
-          <a class="company__button button button_theme_red" href="#">Подробнее о компании</a>
+          <a class="company__button button button-theme_red" href="#">Подробнее о компании</a>
         </section>
         <section class="contacts">
           <h2 class="contacts__title cuprum-large">КОНТАКТЫ</h2>
@@ -237,13 +235,13 @@
             заехав в наш офис:
           </p>
           <img src="img/map.jpg" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-          <a class="contacts__button button button_theme_red" href="#">Заблудились? Напишите нам!</a>
+          <a class="contacts__button button button-theme_red" href="#">Заблудились? Напишите нам!</a>
         </section>
       </section>
 
 
 <!--   Карту пока что разметил так, но в будущем хочу сделать нормальной интерактивной картой  -->
-      <section class="modal map-popup">
+      <section class="modal modal_map">
         <button class="cross-close" type="button" aria-label="Закрыть карту">X</button>
         <a href="https://www.google.com.ua/maps/">
           <img src="img/large-map.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
@@ -251,7 +249,7 @@
       </section>
 
 
-      <section class="modal write-us">
+      <section class="modal modal_write-us">
         <button class="cross-close" type="button" aria-label="Закрыть форму обратной связи">X</button>
         <form action="#" method="get">
           <p>
