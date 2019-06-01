@@ -4,6 +4,9 @@ body {
   padding: 0;
 
   font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000000;
 
   background-color: #ffffff;
 }
@@ -1053,10 +1056,10 @@ a {
 }
 
 .services-item {
-  padding-top: 20px;
-  padding-right: 140px;
-  padding-bottom: 20px;
-  padding-left: 22px;
+  display: flex;
+  align-items: center;
+  min-width: 240px;
+  min-height: 60px;
 
   font-size: 21px;
   line-height: 30px;
@@ -1067,11 +1070,12 @@ a {
   border-bottom: 1px solid #293449;
 }
 
-.services-item_active {
+#delivery:checked ~ .services-item {
   color: #32425c;
 
   background-color: #ffffff;
-  border: none;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
 }
 
 .services-bottom-slider {
