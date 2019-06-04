@@ -15,6 +15,11 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .list-style-none {
   margin: 0;
   padding: 0;
@@ -124,10 +129,27 @@ a {
 }
 
 .search-form {
+  position: relative;
+
   flex-grow: 1;
   padding-top: 11px;
   padding-bottom: 11px;
   padding-left: 49px;
+}
+
+.search-form__svg {
+  position: absolute;
+  left: 17px;
+
+  opacity: 0.3;
+}
+
+.search-form:hover .search-form__svg {
+  opacity: 1;
+}
+
+.search-form__input:focus .search-form__svg path {
+  fill: #ee3643;
 }
 
 .search-form__input {
@@ -828,8 +850,12 @@ a {
 }
 
 .slide {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
   min-width: 620px;
   min-height: 270px;
+  padding: 22px 25px;
 
   color: #ffffff;
 }
@@ -859,6 +885,11 @@ a {
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
+}
+
+.slide__button {
+  width: 195px;
+  margin-top: auto;
 }
 
 /*popular-goods*/
@@ -1115,27 +1146,40 @@ a {
 }
 
 .services-item {
-  display: flex;
-  align-items: center;
-  min-width: 217px;
-  min-height: 60px;
-  padding-left: 23px;
+  min-width: 240px;
 
   font-size: 21px;
   line-height: 30px;
   color: #ffffff;
+}
+
+.services-item_label {
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  padding-left: 23px;
+
+  cursor: pointer;
 
   background-color: #32425c;
   border-top: 1px solid #405069;
   border-bottom: 1px solid #293449;
 }
 
-#delivery:checked ~ .services-item {
+#delivery:checked ~ .services-list .services-item_delivery,
+#warranty:checked ~ .services-list .services-item_warranty,
+#credit:checked ~ .services-list .services-item_credit {
   color: #32425c;
 
   background-color: #ffffff;
   border-top: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
+}
+
+#delivery:checked ~ .services-bottom-slider .services-slide_delivery,
+#warranty:checked ~ .services-bottom-slider .services-slide_warranty,
+#credit:checked ~ .services-bottom-slider .services-slide_credit {
+  display: block;
 }
 
 .services-bottom-slider {
@@ -1148,6 +1192,8 @@ a {
 
 .services-slide_delivery {
   position: relative;
+
+  display: none;
 }
 
 .services-slide_delivery::after {
@@ -1167,6 +1213,8 @@ a {
 
 .services-slide_warranty {
   position: relative;
+
+  display: none;
 }
 
 .services-slide_warranty::after {
@@ -1186,6 +1234,8 @@ a {
 
 .services-slide_credit {
   position: relative;
+
+  display: none;
 }
 
 .services-slide_credit::after {
