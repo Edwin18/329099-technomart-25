@@ -105,8 +105,8 @@ img {
   align-items: center;
   width: 220px;
 
-  font-size: 21px;
-  line-height: 21px;
+  font-size: 24px;
+  line-height: 24px;
   text-transform: uppercase;
   color: #ffffff;
 
@@ -128,6 +128,9 @@ img {
 
 .main-logo_footer {
   height: 63px;
+
+  font-size: 30px;
+  line-height: 30px;
 }
 
 .search-form {
@@ -290,7 +293,7 @@ img {
 
 .header-middle-wrapper {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 }
 
 .main-title {
@@ -613,7 +616,7 @@ img {
 /*main-content*/
 
 .main-index {
-  padding-top: 60px;
+  padding-top: 59px;
 }
 
 .main-content-wrapper {
@@ -889,7 +892,7 @@ img {
   display: flex;
   flex-direction: column;
   min-width: 300px;
-  min-height: 125px;
+  min-height: 123px;
 }
 
 .advantages-items__title {
@@ -974,7 +977,7 @@ img {
   flex-direction: column;
   box-sizing: border-box;
   min-width: 620px;
-  min-height: 270px;
+  min-height: 266px;
   padding: 22px 25px;
 
   color: #ffffff;
@@ -1025,7 +1028,7 @@ img {
   justify-content: space-between;
   min-height: 89px;
   padding-right: 24px;
-  padding-left: 30px;
+  padding-left: 29px;
 
   background-color: #f9f5f0;
 }
@@ -1035,6 +1038,7 @@ img {
 
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
   color: #32425c;
   text-transform: uppercase;
 }
@@ -1047,11 +1051,13 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
-  margin-bottom: 20px;
+/*  margin-bottom: 1px;*/
   margin-left: -20px;
 }
 
 .catalog-item {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1076,7 +1082,7 @@ img {
 }
 
 .catalog-item:hover .catalog-item__img {
-  opacity: 0.1;
+  opacity: 0;
 }
 
 .new-item {
@@ -1114,19 +1120,17 @@ img {
 
 .catalog-item__buttons-wrapper {
   position: absolute;
+  top: 44px;
+  left: 42px;
 
   display: none;
   flex-direction: column;
   justify-content: center;
-
-  width: 218;
-  height: 170px;
+  width: 100%;
 }
 
 .catalog-item__button {
-  box-sizing: border-box;
   width: 135px;
-  height: 38px;
 }
 
 .catalog-item__button_buy {
@@ -1135,7 +1139,7 @@ img {
   color: #ffffff;
 
   background-color: #63a63e;
-  border-bottom: 3px solid #367315;
+  box-shadow: inset 0 -3px 0 0 #367315;
 }
 
 .catalog-item__button_buy::before {
@@ -1166,12 +1170,14 @@ img {
 
 .catalog-item__button_buy:active {
   background-color: #518534;
-  border: none;
+  box-shadow: none;
 }
 
 .catalog-item__button_bookmarks {
-  padding: 0;
   margin-top: 7px;
+  padding: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
 
   color: #32425c;
 
@@ -1252,7 +1258,7 @@ img {
 .popular-manufacturers-list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 21px;
   margin-left: -20px;
 }
 
@@ -1295,6 +1301,7 @@ img {
 
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
   text-transform: uppercase;
   color: #000000;
 }
@@ -1312,7 +1319,7 @@ img {
   display: flex;
   flex-direction: column;
   margin-top: 65px;
-  margin-bottom: 82px;
+  margin-bottom: 79px;
 
   background-color: #f4f8f9;
 }
@@ -1323,7 +1330,7 @@ img {
 }
 
 .services-header__title {
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 
 .services-header__text {
@@ -1332,7 +1339,7 @@ img {
 
 .services-bottom {
   display: flex;
-  margin-bottom: 100px;
+  margin-bottom: 98px;
 }
 
 .services-list {
@@ -1362,6 +1369,7 @@ img {
 
   font-size: 21px;
   line-height: 30px;
+  font-weight: 700;
   color: #ffffff;
 }
 
@@ -1467,10 +1475,12 @@ img {
 
 .services-slide__title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-top: -2px;
+  margin-bottom: 26px;
 
   font-size: 36px;
   line-height: 36px;
+  font-weight: 400;
   text-transform: uppercase;
   color: #32425c;
 }
@@ -1492,14 +1502,14 @@ img {
 .company-contaсts {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 85px;
+  padding-bottom: 88px;
 }
 
 .company {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 620px;
+  width: 520px;
 }
 
 .company__title {
@@ -1510,10 +1520,14 @@ img {
   margin-top: 27px;
 }
 
+.transport-companies-list {
+  margin-top: 7x;
+}
+
 .transport-companies-item {
   position: relative;
 
-  margin-top: 21px;
+  margin-top: 20px;
   padding-left: 35px;
 
   font-size: 18px;
@@ -1535,7 +1549,7 @@ img {
 }
 
 .company__button {
-  margin-top: 30px;
+  margin-top: 35px;
   min-width: 220px;
 }
 
@@ -1550,7 +1564,7 @@ img {
 }
 
 .contacts__map {
-  margin-top: 55px;
+  margin-top: 57px;
 }
 
 .contacts__button {
@@ -1642,12 +1656,12 @@ img {
 
 .main-nav-footer {
   display: flex;
-  margin-top: 40px;
+  margin-top: 37px;
   margin-left: auto;
 }
 
 .main-nav-footer__item {
-  margin-left: 60px;
+  margin-left: 59px;
 }
 
 .main-nav-footer__link {
@@ -1673,6 +1687,8 @@ img {
 
 .footer-adress {
   margin: 0;
+  margin-top: 2px;
+  margin-left: 3px;
 
   font-size: 18px;
   line-height: 24px;
@@ -1681,11 +1697,12 @@ img {
 
 .main-range-footer {
   display: flex;
+  margin-top: 1px;
   margin-left: auto;
 }
 
 .main-range-footer__item {
-  margin-left: 60px;
+  margin-left: 56px;
 }
 
 .main-range-footer__link {
@@ -1718,13 +1735,16 @@ img {
 
 .footer-rights {
   margin: 0;
+  margin-top: 3px;
+  margin-left: 1px;
 
   color: #ffffff;
 }
 
 .footer-social {
   display: flex;
-  margin-left: 150px;
+  margin-top: 5px;
+  margin-left: 155px;
 }
 
 .footer-social__button {
@@ -1762,6 +1782,7 @@ img {
 
 .footer-feedback {
   margin: 0;
+  margin-top: 3px;
   margin-left: auto;
   width: 140px;
 
@@ -1783,6 +1804,7 @@ img {
 
 .footer-copyright {
   margin: 0;
+  margin-top: 3px;
   margin-left: 50px;
   width: 110px;
 
