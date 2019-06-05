@@ -382,15 +382,15 @@ img {
   position: relative;
 
   display: flex;
-  margin-top: 8px;
+  margin-top: 9px;
 }
 
 .user-auth-logined::after {
   content: "";
 
   position: absolute;
-  left: 110px;
-  top: 8px;
+  left: 107px;
+  top: 7px;
 
   border: 2px solid #32425c;
   border-radius: 50%;
@@ -412,8 +412,8 @@ img {
 }
 
 .user-auth-logined__link_my-offer {
-  margin-right: 35px;
-  margin-left: 20px;
+  margin-right: 32px;
+  margin-left: 17px;
 }
 
 .user-auth__button {
@@ -440,7 +440,7 @@ img {
   position: relative;
 
   padding-right: 68px;
-  padding-left: 47px;
+  padding-left: 45px;
 }
 
 .user-auth__button_logined-user:active {
@@ -581,7 +581,7 @@ img {
   content: "";
 
   position: absolute;
-  top: 3px;
+  top: 2px;
   right: -24px;
 
   width: 8px;
@@ -605,10 +605,11 @@ img {
 
 .catalog-header__title {
   margin: 0;
-  margin-left: 30px;
+  margin-left: 29px;
 
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
   text-transform: uppercase;
   color: #32425c;
 }
@@ -813,7 +814,7 @@ img {
 
 .sort__title {
   margin: 0;
-  margin-right: auto;
+  margin-right: 140px;
 
   font-size: inherit;
   line-height: inherit;
@@ -828,8 +829,17 @@ img {
   border-bottom: 1px dotted #ee3643;
 }
 
+.sort__title + .sort__link {
+  margin-right: auto;
+  margin-left: 0;
+}
+
 .sort__direction {
   margin-left: 21px;
+}
+
+.sort__link + .sort__direction {
+  margin-left: 46px;
 }
 
 .sort__direction:hover path {
@@ -1425,7 +1435,7 @@ img {
 
   position: absolute;
   top: 25px;
-  left: 156px;
+  left: 151px;
 
   width: 468px;
   height: 261px;
@@ -1580,12 +1590,10 @@ img {
 
 .pagination-list {
   display: flex;
-  margin-top: 34px;
+  margin-top: 30px;
   margin-bottom: 60px;
 
   font-family: "Pt Sans", "Arial", sans-serif;
-  font-size: 13px;
-  line-height: 18px;
   text-transform: uppercase;
 }
 
@@ -1601,6 +1609,8 @@ img {
   min-height: 36px;
   min-width: 36px;
 
+  font-size: 13px;
+  line-height: 18px;
   color: #000000;
 
   background-color: #ffffff;
@@ -1629,6 +1639,7 @@ img {
 
 .about-wrapper {
   background-color: #f4f8f9;
+  background-color: red;
 }
 
 .about {
@@ -1638,11 +1649,11 @@ img {
 
 .about__title {
   margin-top: 65px;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 }
 
 .about__text {
-  margin-bottom: 70px;
+  margin-bottom: 68px;
 }
 
 /*------------------Footer------------------*/
