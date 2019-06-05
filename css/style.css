@@ -106,7 +106,7 @@ img {
   width: 220px;
 
   font-size: 24px;
-  line-height: 24px;
+  line-height: 25px;
   text-transform: uppercase;
   color: #ffffff;
 
@@ -192,6 +192,7 @@ img {
 
   position: absolute;
   left: 18px;
+  top: 12px;
 
   width: 14px;
   height: 16px;
@@ -232,15 +233,12 @@ img {
   color: #ffffff;
 }
 
-.basket_full {
-  background-color: #ee3643;
-}
-
 .basket::before {
   content: "";
 
   position: absolute;
   left: 13px;
+  top: 12px;
 
   width: 15px;
   height: 15px;
@@ -266,6 +264,21 @@ img {
 
 .basket:active::before {
   opacity: 0.5;
+}
+
+.basket_full {
+  padding-right: 26px;
+  padding-left: 49px;
+
+  background-color: #ee3643;
+}
+
+.basket_full::before {
+  left: 19px;
+}
+
+.bookmarks_catalog {
+  padding-right: 28px;
 }
 
 .checkout {
@@ -297,7 +310,7 @@ img {
 }
 
 .main-title {
-  flex-basis: 192px;
+  flex-basis: 200px;
   margin-top: 3px;
   margin-bottom: 0;
   margin-left: 53px;
@@ -313,7 +326,7 @@ img {
   display: flex;
   flex-direction: column;
   min-width: 270px;
-  margin-left: 75px;
+  margin-left: 67px;
 }
 
 .phone-number {
@@ -1090,11 +1103,11 @@ img {
 .catalog-item:hover .catalog-item__buttons-wrapper {
   display: flex;
   z-index: 1;
+
+  background-color: #ffffff;
 }
 
-.catalog-item:hover .catalog-item__img {
-  opacity: 0;
-}
+
 
 .new-item {
   position: relative;
@@ -1131,21 +1144,28 @@ img {
 
 .catalog-item__buttons-wrapper {
   position: absolute;
-  top: 44px;
-  left: 42px;
+  top: 0;
+  left: 0;
 
   display: none;
   flex-direction: column;
-  justify-content: center;
   width: 100%;
+  padding-top: 43px;
+  padding-bottom: 43px;
 }
 
 .catalog-item__button {
-  width: 135px;
+  margin-right: auto;
+  margin-left: auto;
+
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 400;
 }
 
 .catalog-item__button_buy {
   position: relative;
+  padding-right: 45px;
+  padding-left: 49px;
 
   color: #ffffff;
 
@@ -1158,7 +1178,7 @@ img {
 
   position: absolute;
   top: 11px;
-  left: 12px;
+  left: 14px;
 
   width: 15px;
   height: 15px;
@@ -1185,10 +1205,12 @@ img {
 }
 
 .catalog-item__button_bookmarks {
-  margin-top: 7px;
   padding: 0;
   padding-top: 8px;
-  padding-bottom: 8px;
+  padding-right: 29px;
+  padding-bottom: 6px;
+  padding-left: 33px;
+  margin-top: 8px;
 
   color: #32425c;
 
@@ -1333,7 +1355,7 @@ img {
   display: flex;
   flex-direction: column;
   margin-top: 65px;
-  margin-bottom: 79px;
+  margin-bottom: 80px;
 
   background-color: #f4f8f9;
 }
@@ -1353,7 +1375,7 @@ img {
 
 .services-bottom {
   display: flex;
-  margin-bottom: 98px;
+  margin-bottom: 92px;
 }
 
 .services-list {
@@ -1421,7 +1443,7 @@ img {
 }
 
 .services-slide {
-  width: 350px;
+  width: 380px;
 }
 
 .services-slide_delivery {
@@ -1575,11 +1597,12 @@ img {
 }
 
 .contacts__text {
+  width: 280px;
   margin-top: 27px;
 }
 
 .contacts__map {
-  margin-top: 55px;
+  margin-top: 30px;
 }
 
 .contacts__button {
@@ -1639,7 +1662,6 @@ img {
 
 .about-wrapper {
   background-color: #f4f8f9;
-  background-color: red;
 }
 
 .about {
