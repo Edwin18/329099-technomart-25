@@ -1502,7 +1502,7 @@ img {
 .company-contaсts {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 88px;
+  padding-bottom: 86px;
 }
 
 .company {
@@ -1518,10 +1518,11 @@ img {
 
 .company__text {
   margin-top: 27px;
+  margin-bottom: -5px;
 }
 
 .transport-companies-list {
-  margin-top: 7x;
+  margin-top: 8px;
 }
 
 .transport-companies-item {
@@ -1564,7 +1565,7 @@ img {
 }
 
 .contacts__map {
-  margin-top: 57px;
+  margin-top: 55px;
 }
 
 .contacts__button {
