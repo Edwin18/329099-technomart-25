@@ -27,8 +27,8 @@
         <div class="header-middle-wrapper container">
           <h1 class="main-title">
             Интернет-магазин
-            строительных материалов
-            и&nbspинструментов для ремонта
+            строительных&nbspматериалов
+            и&nbspинструментов&nbspдля&nbspремонта
           </h1>
           <div class="adress-wrapper">
             <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -77,11 +77,15 @@
         </ul>
         <div class="advantages-bottom-wrapper">
           <section class="advantages-slider">
-            <section class="advantages-slider__arrows visually-hidden">
-              <button class="slider-button slider-button_left" type="button" aria-label="Предыдущий слайд"></button>
-              <button class="slider-button slider-button_right" type="button" aria-label="Следующий слайд"></button>
-            </section>
-            <section class="slide slide_drills visually-hidden">
+            <input class="visually-hidden" type="radio" name="slider" id="left-slide" checked>
+            <input class="visually-hidden" type="radio" name="slider" id="right-slide">
+            <label class="arrows-button arrows-button_left" for="left-slide"></label>
+            <label class="arrows-button arrows-button_right" for="right-slide"></label>
+            <div class="radio_button">
+              <label class="radio-controls radio-controls_left" for="left-slide"></label>
+              <label class="radio-controls radio-controls_right" for="right-slide"></label>
+            </div>
+            <section class="slide slide_drills">
               <h2 class="slide__title">Дрели</h2>
               <p class="slide__text">Соседям на радость</p>
               <a class="slide__button button button-theme_red" href="catalog.html">Открыть каталог</a>
@@ -91,12 +95,7 @@
               <p class="slide__text">Настоящие мужские игрушки</p>
               <a class="slide__button button button-theme_red" href="catalog.html">Открыть каталог</a>
             </section>
-            <section class="advantages-slider__radio visually-hidden">
-              <label class="visually-hidden" for="first-slide">Первый слайд</label>
-              <label class="visually-hidden" for="second-slide">Второй слайд</label>
-              <input type="radio" id="first-slide" name="slider">
-              <input type="radio" id="second-slide" name="slider">
-            </section>
+
           </section>
           <ul class="advantages-list-bottom list-style-none">
             <li class="advantages-items discounts">
@@ -261,42 +260,36 @@
         </section>
       </section>
 
-
-<!--   Карту пока что разметил так, но в будущем хочу сделать нормальной интерактивной картой  -->
-      <section class="modal modal_map visually-hidden">
-        <button class="cross-close" type="button" aria-label="Закрыть карту">X</button>
-        <a href="https://www.google.com.ua/maps/">
-          <img src="img/large-map.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-        </a>
+      <section class="modal modal_map">
+        <button class="modal-button-close" type="button" aria-label="Закрыть карту"></button>
+        <img src="img/large-map.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
       </section>
 
-
-      <section class="modal modal_write-us visually-hidden">
-        <button class="cross-close" type="button" aria-label="Закрыть форму обратной связи">X</button>
+      <section class="modal modal_write-us">
+        <button class="modal-button-close" type="button" aria-label="Закрыть форму обратной связи"></button>
         <form action="#" method="get">
-          <p>
-            <label>
+          <div class="form-top-wrapper">
+            <label class="form-label margin-right">
               Ваше имя:
-              <input type="text" name="name" placeholder="Имя Фамилия">
+              <input class="form-input" type="text" name="name" placeholder="Имя Фамилия">
             </label>
-            <label>
+            <label class="form-label">
               Ваш e-mail:
-              <input type="text" name="email" placeholder="email@example.com">
+              <input class="form-input" type="text" name="email" placeholder="email@example.com">
             </label>
-          </p>
-          <p>
-            <label>
+          </div>
+          <div class="form-middle-wrapper">
+            <label class="form-label">
               Текст письма:
-              <textarea name="text-of-the-letter" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+              <textarea class="form-input" name="text-of-the-letter" cols="30" rows="5" placeholder="В свободной форме"></textarea>
             </label>
-          </p>
-          <section class="modal-bottom">
-            <button type="submit">Отправить</button>
-          </section>
+          </div>
+          <div class="form-bottom-wrapper">
+            <button class="form-button button button-theme_red" type="submit">Отправить</button>
+          </div>
         </form>
       </section>
     </main>
-
 
     <footer class="main-footer">
         <section class="main-footer-top container">

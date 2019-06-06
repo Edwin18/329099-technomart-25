@@ -27,8 +27,8 @@
         <div class="header-middle-wrapper container">
           <h1 class="main-title">
             Интернет-магазин
-            строительных материалов
-            и&nbspинструментов для ремонта
+            строительных&nbspматериалов
+            и&nbspинструментов&nbspдля&nbspремонта
           </h1>
           <div class="adress-wrapper">
             <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -278,13 +278,14 @@
         </article>
       </div>
 
-      <section class="modal cart visually-hidden">
-        <button class="cross-close" type="button" aria-label="Закрыть и продолжить покупки">X</button>
-        <h3>Товар добавлен в корзину!</h3>
-        <section class="modal-bottom">
-          <a class="button" href="#">Оформить заказ</a>
-          <button type="button">Продолжить покупки</button>
-        </section>
+      <section class="modal modal-cart">
+        <button class="modal-button-close" type="button" aria-label="Закрыть и продолжить покупки"></button>
+        <span class="modal-cart__icon"></span>
+        <h3 class="modal-cart__title">Товар добавлен в корзину!</h3>
+        <div class="modal-cart-bottom-wrapper">
+          <a class="form-button button button-theme_red margin-right" href="#">Оформить заказ</a>
+          <button class="modal-cart__botton form-button button" type="button">Продолжить покупки</button>
+        </div>
       </section>
     </main>
 
