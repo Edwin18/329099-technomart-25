@@ -993,11 +993,11 @@ img {
 
 .arrows-button {
   position: absolute;
-  top: 114px;
+  top: 121px;
 
   display: block;
-  width: 29px;
-  height: 29px;
+  width: 25px;
+  height: 25px;
 
   border-top: 3px solid #ffffff;
   border-right: 3px solid #ffffff;
@@ -1006,13 +1006,13 @@ img {
 }
 
 .arrows-button_left {
-  left: 20px;
+  left: 30px;
 
   transform: rotate(-135deg);
 }
 
 .arrows-button_right {
-  right: 20px;
+  right: 25px;
 
   transform: rotate(45deg);
 }
@@ -1020,7 +1020,7 @@ img {
 .radio_button {
   position: absolute;
   bottom: 36px;
-  left: 295px;
+  left: 285px;
 
   display: flex;
 }
@@ -1061,11 +1061,11 @@ img {
   display: block;
 }
 
-#left-slide:checked ~ .slide_drills {
+#left-slide:checked ~ .slide_perforators {
   display: flex;
 }
 
-#right-slide:checked ~ .slide_perforators {
+#right-slide:checked ~ .slide_drills {
   display: flex;
 }
 
@@ -1427,7 +1427,7 @@ img {
   display: flex;
   flex-direction: column;
   margin-top: 65px;
-  margin-bottom: 80px;
+  margin-bottom: 78px;
 
   background-color: #f4f8f9;
 }
@@ -1438,7 +1438,7 @@ img {
 }
 
 .services-header__title {
-  margin-bottom: 25px;
+  margin-bottom: 26px;
 }
 
 .services-header__text {
@@ -1447,7 +1447,7 @@ img {
 
 .services-bottom {
   display: flex;
-  margin-bottom: 92px;
+  margin-bottom: 98px;
 }
 
 .services-list {
@@ -1483,8 +1483,8 @@ img {
 
 .services-item_label {
   display: flex;
-  align-items: center;
   min-height: 60px;
+/*  padding-top: ;*/
   padding-left: 23px;
 
   cursor: pointer;
@@ -1492,6 +1492,7 @@ img {
   background-color: #32425c;
   border-top: 1px solid #405069;
   border-bottom: 1px solid #293449;
+  align-items: center;
 }
 
 #delivery:checked ~ .services-list .services-item_delivery,
@@ -1549,7 +1550,7 @@ img {
   content: "";
 
   position: absolute;
-  top: 4px;
+  top: 3px;
   left: 245px;
 
   width: 389px;
@@ -1570,8 +1571,8 @@ img {
   content: "";
 
   position: absolute;
-  top: 2px;
-  left: 169px;
+  top: 1px;
+  left: 165px;
 
   width: 465px;
   height: 285px;
@@ -1594,15 +1595,14 @@ img {
 }
 
 .services-slide__text {
-  margin: 0;
-  margin-bottom: 35px;
+
 }
 
 .services-slide__button {
   display: flex;
   justify-content: center;
   width: 195px;
-  margin-bottom: 30px;
+  margin-top: 25px;
 }
 
 /*company-contaсts*/
