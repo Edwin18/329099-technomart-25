@@ -1759,17 +1759,17 @@ img {
   z-index: 3;
 
   display: none;
-
-  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
 
 .modal-cart {
   flex-direction: column;
   min-width: 620px;
   margin-left: -310px;
+  margin-top: -75px;
 
   background-color: #ffffff;
   border-top: 7px solid #ff5257;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
 
 .modal-cart__icon {
@@ -1801,8 +1801,8 @@ img {
 }
 
 .modal-cart__title {
-  margin-top: 64px;
-  margin-bottom: 67px;
+  margin-top: 65px;
+  margin-bottom: 69px;
   margin-left: 179px;
 
   font-size: 30px;
@@ -1821,6 +1821,9 @@ img {
 }
 
 .modal-cart__botton {
+  padding-left: 0;
+  padding-right: 0;
+
   color: #000000;
 
   background-color: #ffffff;
@@ -1829,25 +1832,28 @@ img {
 .modal_map {
   width: 940px;
   height: 446px;
-  margin-top: -348px;
+  margin-top: -320px;
   margin-left: -470px;
+
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.5);
 }
 
 .modal_write-us {
   flex-direction: column;
   box-sizing: border-box;
   min-width: 620px;
-  margin-top: -200px;
+  margin-top: -147px;
   margin-left: -310px;
 
   background-color: #ffffff;
   border-top: 7px solid #ff5257;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
 
 .modal-button-close {
   position: absolute;
-  top: 9px;
-  right: 9px;
+  top: 7px;
+  right: 7px;
 
   width: 27px;
   height: 27px;
@@ -1910,9 +1916,9 @@ img {
 
 .form-input {
   margin-top: 10px;
-  padding-top: 11px;
+  padding-top: 9px;
   padding-right: 14px;
-  padding-bottom: 11px;
+  padding-bottom: 8px;
   padding-left: 14px;
 
   font-family: "Pt Sans", "Arial", sans-serif;
@@ -1942,7 +1948,7 @@ img {
 .form-middle-wrapper {
   padding-right: 80px;
   padding-left: 80px;
-  margin-bottom: 35px;
+  margin-bottom: 39px;
 }
 
 .form-bottom-wrapper {
