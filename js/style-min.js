@@ -1,0 +1,1 @@
+if(document.querySelectorAll(".js-button")){var buttons=document.querySelectorAll(".js-button");buttons.forEach(function(t,e,o){t.addEventListener("click",function(e){e.preventDefault();var o=t.dataset.button;document.querySelector("[data-modal="+o+"]").classList.toggle("modal-display")})})}else alert("Отсутствует класс js-button у кнопок отвечающих за вызов модальных окон.");

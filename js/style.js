@@ -76,68 +76,87 @@
 
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // MODAL
 
-var buttons = document.querySelectorAll(".js-button");
-var buyModal = document.querySelector(".modal-cart");
-var mapModal = document.querySelector(".modal_map");
-var writeUsModal = document.querySelector(".modal_write-us");
+// var buttons = document.querySelectorAll(".js-button");
+// var buyModal = document.querySelector(".modal-cart");
+// var mapModal = document.querySelector(".modal_map");
+// var writeUsModal = document.querySelector(".modal_write-us");
 
-buttons.forEach(function (item, number, buttons) {
-  item.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    switch (item.dataset.modal) {
-        case "cart":
-            buyModal.classList.add("modal-display");
-            break;
-        case "map":
-            mapModal.classList.add("modal-display");
-            break;
-        case "write-us":
-            writeUsModal.classList.add("modal-display");
-            break;
-        case "close":
-            if (document.querySelector(".modal-cart")
-            && document.querySelector(".modal_map")
-            && document.querySelector(".modal_write-us")) {
-                buyModal.classList.remove("modal-display");
-                mapModal.classList.remove("modal-display");
-                writeUsModal.classList.remove("modal-display");
-            } else {
-                buyModal.classList.remove("modal-display");
-            }
-            break;
-        default:
-            break;
-    }
-  });
-});
+// buttons.forEach(function (item, number, buttons) {
+//   item.addEventListener("click", function (evt) {
+//     evt.preventDefault();
+//     switch (item.dataset.modal) {
+//         case "cart":
+//             buyModal.classList.add("modal-display");
+//             break;
+//         case "map":
+//             mapModal.classList.add("modal-display");
+//             break;
+//         case "write-us":
+//             writeUsModal.classList.add("modal-display");
+//             break;
+//         case "close":
+//             if (document.querySelector(".modal-cart")
+//             && document.querySelector(".modal_map")
+//             && document.querySelector(".modal_write-us")) {
+//                 buyModal.classList.remove("modal-display");
+//                 mapModal.classList.remove("modal-display");
+//                 writeUsModal.classList.remove("modal-display");
+//             } else {
+//                 buyModal.classList.remove("modal-display");
+//             }
+//             break;
+//         default:
+//             break;
+//     }
+//   });
+// });
+
+if (document.querySelectorAll(".js-button")) {
+    var buttons = document.querySelectorAll(".js-button");
+
+    buttons.forEach(function(item, number, buttons) {
+        item.addEventListener("click", function(evt) {
+            evt.preventDefault();
+            var data = item.dataset.button;
+            var modal = document.querySelector("[data-modal=" + data + "]");
+            modal.classList.toggle("modal-display");
+        });
+    });
+} else {
+    alert("Отсутствует класс js-button у кнопок отвечающих за вызов модальных окон.");
+};
+
+  
+
+
 
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // FILTER-PRICE
 
-var minPriceButton = document.querySelector(".price-controls__button_min");
-var maxPriceButton = document.querySelector(".price-controls__button_max");
+// var minPriceButton = document.querySelector(".price-controls__button_min");
+// var maxPriceButton = document.querySelector(".price-controls__button_max");
 
-var minPriceInput = document.querySelector("#price-min-value");
-var maxPriceInput = document.querySelector("#price-max-value");
+// var minPriceInput = document.querySelector("#price-min-value");
+// var maxPriceInput = document.querySelector("#price-max-value");
 
-minPriceButton.addEventListener("mousedown", function (evn) {
-    // evn.preventDefault(evn);
-    document.addEventListener('mousemove', function (evn) {
-        // console.log(evn.offsetX);
-        minPriceButton.style.left = evn.offsetX + "px";
-        minPriceInput.value = (minPriceButton.style.left.replace(/[^0-9]/g, '') - 20) * 218;
+// minPriceButton.addEventListener("mousedown", function (evn) {
+//     // evn.preventDefault(evn);
+//     document.addEventListener('mousemove', function (evn) {
+//         // console.log(evn.offsetX);
+//         minPriceButton.style.left = evn.offsetX + "px";
+//         minPriceInput.value = (minPriceButton.style.left.replace(/[^0-9]/g, '') - 20) * 218;
 
-        if (minPriceInput.value < 0) {
-            minPriceInput.value = 0;
-            minPriceButton.style.left = 20 + "px";
-        }
-    });
-});
+//         if (minPriceInput.value < 0) {
+//             minPriceInput.value = 0;
+//             minPriceButton.style.left = 20 + "px";
+//         }
+//     });
+// });
 
-minPriceButton.addEventListener("mouseup", function (evn) {
-    document.removeEventListener('mousemove', function (evn) {
+// minPriceButton.addEventListener("mouseup", function (evn) {
+//     document.removeEventListener('mousemove', function (evn) {
     
-    });
-});
+//     });
+// });
 
 
 // minPriceButton.style.left = (minPriceInput.value / 218 + 20) + "px";

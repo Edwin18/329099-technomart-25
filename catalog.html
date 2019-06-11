@@ -5,7 +5,7 @@
     <title>HTML Academy: Техномарт</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-min.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -36,11 +36,15 @@
             <p class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
           <section class="user-auth user-auth_logined-user list-style-none">
-            <a class="user-auth__button user-auth__button_logined-user" href="#">
-              <svg class="user-auth__svg user-auth__svg_user-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="18"><path fill="#c5c5c5" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/></svg>
-              Равшан Джамшутович
-              <svg class="user-auth__svg user-auth__svg_logout-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="17"><g fill="#c5c5c5"><path d="M21 8.5L12.125 0v6h-6v5h6v6z"/><path d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/></g></svg>
-            </a>
+            <div class="user-auth-top-wrapper">
+              <a class="user-auth__button user-auth__button_logined-user" href="#">
+                <svg class="user-auth__svg user-auth__svg_user-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="18"><path fill="#c5c5c5" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/></svg>
+                Равшан Джамшутович
+              </a>
+              <a class="user-auth__button_logout-user" href="#">
+                <svg class="user-auth__svg user-auth__svg_logout-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="17"><g fill="#c5c5c5"><path d="M21 8.5L12.125 0v6h-6v5h6v6z"/><path d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/></g></svg>
+              </a>
+            </div>
             <ul class="user-auth-logined list-style-none">
               <li><a class="user-auth-logined__link user-auth-logined__link_my-offer" href="#">Мои заказы</a></li>
               <li><a class="user-auth-logined__link user-auth-logined__link_personal-area" href="#">Личный кабинет</a></li>
@@ -92,9 +96,9 @@
                 </div>
                 <div class="price-inputs">
                   <label class="visually-hidden" for="price-min-value">Минимальная цена</label>
-                  <input class="price-inputs__input" type="text" name="min-value" id="price-min-value" value="0">
+                  <input class="price-inputs__input price-inputs__input_min" type="text" name="min-value" id="price-min-value" value="0">
                   <label class="visually-hidden" for="price-max-value">Максимальная цена</label>
-                  <input class="price-inputs__input" type="text" name="max-value" id="price-max-value" value="30000">
+                  <input class="price-inputs__input price-inputs__input_max" type="text" name="max-value" id="price-max-value" value="30000">
                 </div>
               </fieldset>
               <hr class="form-border">
@@ -178,7 +182,7 @@
             <ul class="catalog-list list-style-none">
               <li class="catalog-item">
                 <div class="catalog-item__buttons-wrapper">
-                  <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-modal="cart">купить</a>
+                  <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
                 </div>
                 <img class="catalog-item__img" src="img/perforator-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
@@ -188,7 +192,7 @@
               </li>
               <li class="catalog-item">
                 <div class="catalog-item__buttons-wrapper">
-                  <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-modal="cart">купить</a>
+                  <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
                 </div>
                 <img class="catalog-item__img" src="img/perforator-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
@@ -198,7 +202,7 @@
               </li>
               <li class="catalog-item new-item">
                 <div class="catalog-item__buttons-wrapper">
-                  <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-modal="cart">купить</a>
+                  <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
                 </div>
                 <img class="catalog-item__img" src="img/perforator-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
@@ -207,7 +211,7 @@
               </li>
               <li class="catalog-item">
                 <div class="catalog-item__buttons-wrapper">
-                  <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-modal="cart">купить</a>
+                  <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
                 </div>
                 <img class="catalog-item__img" src="img/perforator-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
@@ -217,7 +221,7 @@
               </li>
               <li class="catalog-item new-item">
                 <div class="catalog-item__buttons-wrapper">
-                  <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-modal="cart">купить</a>
+                  <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
                 </div>
                 <img class="catalog-item__img" src="img/perforator-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
@@ -227,7 +231,7 @@
               </li>
               <li class="catalog-item">
                 <div class="catalog-item__buttons-wrapper">
-                  <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-modal="cart">купить</a>
+                  <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
                 </div>
                 <img class="catalog-item__img" src="img/perforator-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
@@ -236,7 +240,7 @@
               </li>
               <li class="catalog-item new-item">
                 <div class="catalog-item__buttons-wrapper">
-                  <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-modal="cart">купить</a>
+                  <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
                 </div>
                 <img class="catalog-item__img" src="img/perforator-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
@@ -246,7 +250,7 @@
               </li>
               <li class="catalog-item">
                 <div class="catalog-item__buttons-wrapper">
-                  <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-modal="cart">купить</a>
+                  <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
                 </div>
                 <img class="catalog-item__img" src="img/perforator-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
@@ -256,7 +260,7 @@
               </li>
               <li class="catalog-item">
                 <div class="catalog-item__buttons-wrapper">
-                  <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-modal="cart">купить</a>
+                  <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
                 </div>
                 <img class="catalog-item__img" src="img/perforator-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
@@ -283,13 +287,13 @@
         </article>
       </div>
 
-      <section class="modal modal-cart js-button">
-        <button class="modal-button-close js-button" type="button" aria-label="Закрыть и продолжить покупки" data-modal="close"></button>
+      <section class="modal modal-cart" data-modal="cart">
+        <button class="modal-button-close js-button" type="button" aria-label="Закрыть и продолжить покупки" data-button="cart"></button>
         <span class="modal-cart__icon"></span>
         <h3 class="modal-cart__title">Товар добавлен в корзину!</h3>
         <div class="modal-cart-bottom-wrapper">
           <a class="form-button button button-theme_red margin-right" href="#">Оформить заказ</a>
-          <button class="modal-cart__button form-button button js-button" type="button" data-modal="close">Продолжить покупки</button>
+          <button class="modal-cart__button form-button button js-button" type="button" data-button="cart">Продолжить покупки</button>
         </div>
       </section>
     </main>
@@ -340,6 +344,6 @@
       </div>
     </footer>
 
-    <script src="js/style.js"></script>
+    <script src="js/style-min.js"></script>
   </body>
 </html>
