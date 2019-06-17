@@ -111,6 +111,8 @@
 //   });
 // });
 
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // MODAL ver. 2.0
+
 if (document.querySelectorAll(".js-button")) {
     var buttons = document.querySelectorAll(".js-button");
 
@@ -120,10 +122,27 @@ if (document.querySelectorAll(".js-button")) {
             var data = item.dataset.button;
             var modal = document.querySelector("[data-modal=" + data + "]");
             modal.classList.toggle("modal-display");
+            modal.classList.remove("modal-error");
         });
     });
 } else {
     alert("Отсутствует класс js-button у кнопок отвечающих за вызов модальных окон.");
+};
+
+if (document.querySelector(".modal_write-us")) {
+    var modal = document.querySelector(".modal_write-us");
+    var form = modal.querySelector("form");
+    var name = form.querySelector("[name=name]");
+    var email = form.querySelector("[name=email]");
+    var someText = form.querySelector("[name=text-of-the-letter]");
+    form.addEventListener("submit", function(evn) {
+        if (!name.value && !email.value && !someText.value) {
+            evn.preventDefault();
+            modal.classList.remove("modal-error");
+            modal.offsetWidth = modal.offsetWidth;
+            modal.classList.add("modal-error");
+        }
+    });
 };
 
   
@@ -140,8 +159,10 @@ if (document.querySelectorAll(".js-button")) {
 
 // minPriceButton.addEventListener("mousedown", function (evn) {
 //     // evn.preventDefault(evn);
-//     document.addEventListener('mousemove', function (evn) {
-//         // console.log(evn.offsetX);
+//     console.log(evn.offsetX);
+//     document.addEventListener("mousemove", function (evn) {
+        
+//         console.log(evn.offsetX);
 //         minPriceButton.style.left = evn.offsetX + "px";
 //         minPriceInput.value = (minPriceButton.style.left.replace(/[^0-9]/g, '') - 20) * 218;
 
@@ -153,11 +174,29 @@ if (document.querySelectorAll(".js-button")) {
 // });
 
 // minPriceButton.addEventListener("mouseup", function (evn) {
-//     document.removeEventListener('mousemove', function (evn) {
-    
+//     // evn.preventDefault(evn);
+//     console.log(evn.offsetX);
+//     document.removeEventListener("mousemove", function (evn) {
+        
+//         // console.log(evn.offsetX);
+//         // minPriceButton.style.left = evn.offsetX + "px";
+//         // minPriceInput.value = (minPriceButton.style.left.replace(/[^0-9]/g, '') - 20) * 218;
+
+//         // if (minPriceInput.value < 0) {
+//         //     minPriceInput.value = 0;
+//         //     minPriceButton.style.left = 20 + "px";
+//         // }
 //     });
 // });
 
+
+
+
+// minPriceButton.addEventListener("mouseup", function (evn) {
+//     document.removeEventListener("mouseup", function (evn) {
+//         move(evn);
+//     });
+// });
 
 // minPriceButton.style.left = (minPriceInput.value / 218 + 20) + "px";
 // maxPriceButton.style.left = (maxPriceInput.value / 218 + 20) + "px";

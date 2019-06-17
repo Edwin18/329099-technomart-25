@@ -41,7 +41,7 @@
                 <svg class="user-auth__svg user-auth__svg_user-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="18"><path fill="#c5c5c5" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/></svg>
                 Равшан Джамшутович
               </a>
-              <a class="user-auth__button_logout-user" href="#">
+              <a class="user-auth__button_logout-user" href="#" aria-label="Выйти из учетной записи">
                 <svg class="user-auth__svg user-auth__svg_logout-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="17"><g fill="#c5c5c5"><path d="M21 8.5L12.125 0v6h-6v5h6v6z"/><path d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/></g></svg>
               </a>
             </div>
@@ -53,7 +53,7 @@
         </div>
         <nav class="container">
            <ul class="main-nav-header list-style-none">
-               <li class="main-nav-header__item"><a class="main-nav-header__link" href="#">Главная</a></li>
+               <li class="main-nav-header__item"><a class="main-nav-header__link" href="index.html">Главная</a></li>
                <li class="main-nav-header__item"><a class="main-nav-header__link" href="#">Компания</a></li>
                <li class="main-nav-header__item"><a class="main-nav-header__link" href="#">Каталог</a></li>
                <li class="main-nav-header__item"><a class="main-nav-header__link" href="#">Новости</a></li>
@@ -66,10 +66,10 @@
     <main>
       <div class="container">
         <ul class="breadcrumbs list-style-none">
-          <li><a class="breadcrumbs__link breadcrumbs__link_home" href="index.html"></a></li>
+          <li><a class="breadcrumbs__link breadcrumbs__link_home" href="index.html" aria-label="Вернутся на главную"></a></li>
           <li><a class="breadcrumbs__link" href="#">Каталог</a></li>
           <li><a class="breadcrumbs__link" href="#">Инструмент</a></li>
-          <li><a class="breadcrumbs__link">Перфораторы</a></li>
+          <li><a class="breadcrumbs__link breadcrumbs__link_this-page">Перфораторы</a></li>
         </ul>
       </div>
       <div class="container">
@@ -77,7 +77,6 @@
           <h2 class="catalog-header__title">Перфораторы</h2>
         </header>
       </div>
-
       <div class="main-content-wrapper container">
         <div class="main-content-wrapper-left">
           <section class="filter">
@@ -91,8 +90,8 @@
                   <div class="price-controls__scale">
                     <div class="price-controls__bar"></div>
                   </div>
-                  <button class="price-controls__button price-controls__button_min" style="left: 20px" type="button"></button>
-                  <button class="price-controls__button price-controls__button_max" style="left: 160px" type="button"></button>
+                  <button class="price-controls__button price-controls__button_min" style="left: 20px" type="button" aria-label="Выбор минимальной цены"></button>
+                  <button class="price-controls__button price-controls__button_max" style="left: 160px" type="button" aria-label="Выбор максимальной цены"></button>
                 </div>
                 <div class="price-inputs">
                   <label class="visually-hidden" for="price-min-value">Минимальная цена</label>
@@ -106,36 +105,36 @@
                 <legend class="form-category__title">Производители:</legend>
                 <ul class="manufacturers-list list-style-none">
                   <li class="filter-option">
-                    <input class="filter-option__checkbox visually-hidden" type="checkbox" name="bosch" id="bosch" checked>
-                    <label class="filter-option-checkbox__description" for="bosch">
+                    <input class="filter-option__checkbox visually-hidden" type="checkbox" name="bosch" id="bosch" tabindex="-1" checked>
+                    <label class="filter-option-checkbox__description" for="bosch" tabindex="0">
                       <svg class="filter-option-checkbox__svg" xmlns="http://www.w3.org/2000/svg" width="27" height="23"><path fill="#c5c5c5" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/><path fill="#c5c5c5" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/></svg>
                       BOSCH
                     </label>
                   </li>
                   <li class="filter-option">
-                    <input class="filter-option__checkbox visually-hidden" type="checkbox" name="interscop" id="interscop">
-                    <label class="filter-option-checkbox__description" for="interscop">
+                    <input class="filter-option__checkbox visually-hidden" type="checkbox" name="interscop" id="interscop" tabindex="-1">
+                    <label class="filter-option-checkbox__description" for="interscop" tabindex="0">
                       <svg class="filter-option-checkbox__svg" xmlns="http://www.w3.org/2000/svg" width="27" height="23"><path fill="#c5c5c5" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/><path fill="#c5c5c5" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/></svg>
                       ИНТЕРСКОП
                     </label>
                   </li>
                   <li class="filter-option">
-                    <input class="filter-option__checkbox visually-hidden" type="checkbox" name="makita" id="makita" checked>
-                    <label class="filter-option-checkbox__description" for="makita">
+                    <input class="filter-option__checkbox visually-hidden" type="checkbox" name="makita" id="makita" tabindex="-1" checked>
+                    <label class="filter-option-checkbox__description" for="makita" tabindex="0">
                       <svg class="filter-option-checkbox__svg" xmlns="http://www.w3.org/2000/svg" width="27" height="23"><path fill="#c5c5c5" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/><path fill="#c5c5c5" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/></svg>
                       MAKITA
                     </label>
                   </li>
                   <li class="filter-option">
-                    <input class="filter-option__checkbox visually-hidden" type="checkbox" name="dewalt" id="dewalt">
-                    <label class="filter-option-checkbox__description" for="dewalt">
+                    <input class="filter-option__checkbox visually-hidden" type="checkbox" name="dewalt" id="dewalt" tabindex="-1">
+                    <label class="filter-option-checkbox__description" for="dewalt" tabindex="0">
                       <svg class="filter-option-checkbox__svg" xmlns="http://www.w3.org/2000/svg" width="27" height="23"><path fill="#c5c5c5" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/><path fill="#c5c5c5" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/></svg>
                       DEWALT
                     </label>
                   </li>
                   <li class="filter-option">
-                    <input class="filter-option__checkbox visually-hidden" type="checkbox" name="hitachi" id="hitachi">
-                    <label class="filter-option-checkbox__description" for="hitachi">
+                    <input class="filter-option__checkbox visually-hidden" type="checkbox" name="hitachi" id="hitachi" tabindex="-1">
+                    <label class="filter-option-checkbox__description" for="hitachi" tabindex="0">
                       <svg class="filter-option-checkbox__svg" xmlns="http://www.w3.org/2000/svg" width="27" height="23"><path fill="#c5c5c5" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/><path fill="#c5c5c5" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/></svg>
                       HITACHI
                     </label>
@@ -147,14 +146,14 @@
                 <legend class="form-category__title">Питание:</legend>
                 <ul class="power-list list-style-none">
                   <li class="filter-option">
-                    <input class="filter-option__radio visually-hidden" type="radio" name="power" id="battery" checked>
-                    <label class="filter-option-radio__description" for="battery">
+                    <input class="filter-option__radio visually-hidden" type="radio" name="power" id="battery" tabindex="-1" checked>
+                    <label class="filter-option-radio__description" for="battery" tabindex="0">
                       Аккумуляторные
                     </label>
                   </li>
                   <li class="filter-option">
-                    <input class="filter-option__radio visually-hidden" type="radio" name="power" id="cable">
-                    <label class="filter-option-radio__description" for="cable">
+                    <input class="filter-option__radio visually-hidden" type="radio" name="power" id="cable" tabindex="-1">
+                    <label class="filter-option-radio__description" for="cable" tabindex="0">
                       Сетевые
                     </label>
                   </li>
@@ -180,7 +179,7 @@
           <section class="catalog">
             <h3 class="visually-hidden">Список товаров</h3>
             <ul class="catalog-list list-style-none">
-              <li class="catalog-item">
+              <li class="catalog-item" tabindex="0">
                 <div class="catalog-item__buttons-wrapper">
                   <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
@@ -190,7 +189,7 @@
                 <del class="catalog-item__old-price">22500 Р.</del>
                 <b class="catalog-item__price">15500 Р.</b>
               </li>
-              <li class="catalog-item">
+              <li class="catalog-item" tabindex="0">
                 <div class="catalog-item__buttons-wrapper">
                   <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
@@ -200,7 +199,7 @@
                 <del class="catalog-item__old-price">30500 Р.</del>
                 <b class="catalog-item__price">25500 Р.</b>
               </li>
-              <li class="catalog-item new-item">
+              <li class="catalog-item new-item" tabindex="0">
                 <div class="catalog-item__buttons-wrapper">
                   <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
@@ -209,7 +208,7 @@
                 <h4 class="catalog-item__title">Перфоратор BOSCH BFG 2000</h4>
                 <b class="catalog-item__price">12500 Р.</b>
               </li>
-              <li class="catalog-item">
+              <li class="catalog-item" tabindex="0">
                 <div class="catalog-item__buttons-wrapper">
                   <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
@@ -219,7 +218,7 @@
                 <del class="catalog-item__old-price">22500 Р.</del>
                 <b class="catalog-item__price">15500 Р.</b>
               </li>
-              <li class="catalog-item new-item">
+              <li class="catalog-item new-item" tabindex="0">
                 <div class="catalog-item__buttons-wrapper">
                   <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
@@ -229,7 +228,7 @@
                 <del class="catalog-item__old-price">30500 Р.</del>
                 <b class="catalog-item__price">25500 Р.</b>
               </li>
-              <li class="catalog-item">
+              <li class="catalog-item" tabindex="0">
                 <div class="catalog-item__buttons-wrapper">
                   <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
@@ -238,7 +237,7 @@
                 <h4 class="catalog-item__title">Перфоратор BOSCH BFG 2000</h4>
                 <b class="catalog-item__price">12500 Р.</b>
               </li>
-              <li class="catalog-item new-item">
+              <li class="catalog-item new-item" tabindex="0">
                 <div class="catalog-item__buttons-wrapper">
                   <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
@@ -248,7 +247,7 @@
                 <del class="catalog-item__old-price">22500 Р.</del>
                 <b class="catalog-item__price">15500 Р.</b>
               </li>
-              <li class="catalog-item">
+              <li class="catalog-item" tabindex="0">
                 <div class="catalog-item__buttons-wrapper">
                   <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
@@ -258,7 +257,7 @@
                 <del class="catalog-item__old-price">30500 Р.</del>
                 <b class="catalog-item__price">25500 Р.</b>
               </li>
-              <li class="catalog-item">
+              <li class="catalog-item" tabindex="0">
                 <div class="catalog-item__buttons-wrapper">
                   <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
@@ -286,7 +285,6 @@
           </p>
         </article>
       </div>
-
       <section class="modal modal-cart" data-modal="cart">
         <button class="modal-button-close js-button" type="button" aria-label="Закрыть и продолжить покупки" data-button="cart"></button>
         <span class="modal-cart__icon"></span>
@@ -297,7 +295,6 @@
         </div>
       </section>
     </main>
-
     <footer class="main-footer">
         <section class="main-footer-top container">
           <a class="main-logo main-logo_footer" href="index.html">Техномарт</a>
@@ -343,7 +340,6 @@
         </section>
       </div>
     </footer>
-
     <script src="js/style-min.js"></script>
   </body>
 </html>

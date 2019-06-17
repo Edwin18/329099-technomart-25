@@ -51,7 +51,7 @@
            <ul class="main-nav-header list-style-none">
                <li class="main-nav-header__item"><a class="main-nav-header__link" href="#">Главная</a></li>
                <li class="main-nav-header__item"><a class="main-nav-header__link" href="#">Компания</a></li>
-               <li class="main-nav-header__item"><a class="main-nav-header__link" href="#">Каталог</a></li>
+               <li class="main-nav-header__item"><a class="main-nav-header__link" href="catalog.html">Каталог</a></li>
                <li class="main-nav-header__item"><a class="main-nav-header__link" href="#">Новости</a></li>
                <li class="main-nav-header__item"><a class="main-nav-header__link" href="#">Спецпредложения</a></li>
                <li class="main-nav-header__item"><a class="main-nav-header__link" href="#">Доставка</a></li>
@@ -59,7 +59,6 @@
            </ul>
         </nav>
     </header>
-
     <main class="main-index">
       <section class="advantages container">
         <ul class="advantages-list-top list-style-none">
@@ -80,8 +79,8 @@
           <section class="advantages-slider">
             <input class="first-slide visually-hidden" type="radio" name="slider" id="left-slide">
             <input class="second-slide visually-hidden" type="radio" name="slider" id="right-slide" checked>
-            <button class="arrows-button arrows-button_left" type="button"></button>
-            <button class="arrows-button arrows-button_right" type="button"></button>
+            <button class="arrows-button arrows-button_left" type="button" aria-label="Предыдущий слайд"></button>
+            <button class="arrows-button arrows-button_right" type="button" aria-label="Следующий слайд"></button>
             <div class="radio_button">
               <label class="radio-controls radio-controls_left" for="left-slide"></label>
               <label class="radio-controls radio-controls_right" for="right-slide"></label>
@@ -96,7 +95,6 @@
               <p class="slide__text">Настоящие мужские игрушки</p>
               <a class="slide__button button button-theme_red" href="catalog.html">Открыть каталог</a>
             </section>
-
           </section>
           <ul class="advantages-list-bottom list-style-none">
             <li class="advantages-items discounts">
@@ -110,15 +108,13 @@
           </ul>
         </div>
       </section>
-
-
       <section class="popular-goods container">
         <header class="header-popular">
           <h2 class="header-popular__title">Популярные товары:</h2>
           <a class="header-popular__button button button-theme_red" href="#">Все популярные товары</a>
         </header>
         <ul class="popular-goods-list list-style-none">
-          <li class="catalog-item">
+          <li class="catalog-item" tabindex="0">
             <div class="catalog-item__buttons-wrapper">
                   <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
@@ -128,7 +124,7 @@
             <del class="catalog-item__old-price">32500 Р.</del>
             <b class="catalog-item__price">25500 Р.</b>
           </li>
-          <li class="catalog-item">
+          <li class="catalog-item" tabindex="0">
             <div class="catalog-item__buttons-wrapper">
                   <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
@@ -138,7 +134,7 @@
             <del class="catalog-item__old-price">22500 Р.</del>
             <b class="catalog-item__price">15500 Р.</b>
           </li>
-          <li class="catalog-item">
+          <li class="catalog-item" tabindex="0">
             <div class="catalog-item__buttons-wrapper">
                   <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
@@ -148,7 +144,7 @@
             <del class="catalog-item__old-price">30500 Р.</del>
             <b class="catalog-item__price">25500 Р.</b>
           </li>
-          <li class="catalog-item new-item">
+          <li class="catalog-item new-item" tabindex="0">
             <div class="catalog-item__buttons-wrapper">
                   <a class="catalog-item__button catalog-item__button_buy button js-button" href="#" data-button="cart">купить</a>
                   <button class="catalog-item__button catalog-item__button_bookmarks button" type="button">В закладки</button>
@@ -159,8 +155,6 @@
           </li>
         </ul>
       </section>
-
-
       <section class="popular-manufacturers container">
         <header class="header-popular">
           <h2 class="header-popular__title">Популярные производители:</h2>
@@ -177,8 +171,6 @@
           <li class="popular-manufacturers__item"><a class="popular-manufacturers__link" href="#"><img class="popular-manufacturers__img" src="img/metabo.png" width="204" height="69" alt="Metabo"></a></li>
         </ul>
       </section>
-
-
       <section class="services">
         <header class="services-header container">
           <h2 class="services-header__title cuprum-large">Сервисы</h2>
@@ -188,18 +180,18 @@
           </p>
         </header>
         <section class="services-bottom container">
-          <input class="delivery-input visually-hidden" type="radio" name="services-item" id="delivery" checked>
-          <input class="warranty-input visually-hidden" type="radio" name="services-item" id="warranty">
-          <input class="credit-input visually-hidden" type="radio" name="services-item" id="credit">
+          <input class="delivery-input visually-hidden" type="radio" name="services-item" id="delivery" tabindex="-1" checked>
+          <input class="warranty-input visually-hidden" type="radio" name="services-item" id="warranty" tabindex="-1">
+          <input class="credit-input visually-hidden" type="radio" name="services-item" id="credit" tabindex="-1">
           <ul class="services-list list-style-none">
             <li class="services-item">
-              <label class="services-item_label services-item_delivery" for="delivery">Доставка</label>
+              <label class="services-item_label services-item_delivery" for="delivery" tabindex="0">Доставка</label>
             </li>
             <li class="services-item">
-              <label class="services-item_label services-item_warranty" for="warranty">Гарантия</label>
+              <label class="services-item_label services-item_warranty" for="warranty" tabindex="0">Гарантия</label>
             </li>
             <li class="services-item">
-              <label class="services-item_label services-item_credit" for="credit">Кредит</label>
+              <label class="services-item_label services-item_credit" for="credit" tabindex="0">Кредит</label>
             </li>
           </ul>
           <section class="services-bottom-slider">
@@ -231,8 +223,6 @@
           </section>
         </section>
       </section>
-
-
       <section class="company-contaсts container">
         <section class="company">
           <h2 class="company__title cuprum-large">КОМПАНИЯ «Техномарт»</h2>
@@ -262,7 +252,6 @@
           <a class="contacts__button button button-theme_red js-button" href="#" data-button="write-us">Заблудились? Напишите нам!</a>
         </section>
       </section>
-
       <section class="modal modal-cart" data-modal="cart">
         <button class="modal-button-close js-button" type="button" aria-label="Закрыть и продолжить покупки" data-button="cart"></button>
         <span class="modal-cart__icon"></span>
@@ -272,12 +261,10 @@
           <button class="modal-cart__button form-button button js-button" type="button" data-button="cart">Продолжить покупки</button>
         </div>
       </section>
-
       <section class="modal modal_map" data-modal="map">
         <button class="modal-button-close js-button" type="button" aria-label="Закрыть карту" data-button="map"></button>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1559922826962!5m2!1sru!2sua" width="940" height="446" style="border:0" allowfullscreen></iframe>
       </section>
-
       <section class="modal modal_write-us" data-modal="write-us">
         <button class="modal-button-close js-button" type="button" aria-label="Закрыть форму обратной связи" data-button="write-us"></button>
         <form action="#" method="get">
@@ -303,10 +290,9 @@
         </form>
       </section>
     </main>
-
     <footer class="main-footer">
         <section class="main-footer-top container">
-          <a class="main-logo main-logo_footer" href="index.html">Техномарт</a>
+          <a class="main-logo main-logo_footer">Техномарт</a>
           <ul class="main-nav-footer list-style-none">
             <li class="main-nav-footer__item"><a class="main-nav-footer__link" href="#">Компания</a></li>
             <li class="main-nav-footer__item"><a class="main-nav-footer__link" href="#">Новости</a></li>
