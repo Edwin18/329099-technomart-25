@@ -414,14 +414,6 @@ img {
   background-position: 0 0;
 }
 
-.phone-number:hover {
-  border-color: #212a3a;
-}
-
-.phone-number:active {
-  border-color: #161d29;
-}
-
 .header-adress {
   margin-top: 4px;
   margin-right: auto;
@@ -1084,14 +1076,6 @@ img {
 
   background-color: #ffffff;
   border: 1px solid #e5e5e5;
-}
-
-.filter-button:hover {
-  border-color: #bdc6ca;
-}
-
-.filter-button:active {
-  border-color: #ee3643;
 }
 
 .main-content-wrapper-right {
@@ -2349,14 +2333,6 @@ img {
   background-color: #ffffff;
 }
 
-.modal-cart__button:hover {
-  color: #ee3643;
-}
-
-.modal-cart__button:active {
-  color: rgba(50, 66, 92, 0.3);
-}
-
 .modal_map {
   width: 940px;
   height: 446px;
@@ -2575,6 +2551,8 @@ img {
 }
 
 .footer-adress {
+  -ms-flex-preferred-size: 325px;
+               flex-basis: 325px;
   margin: 0;
   margin-top: 3px;
   margin-left: 3px;
@@ -2628,13 +2606,13 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-     -ms-flex-align: center;
-        align-items: center;
-  min-height: 107px;
+  padding-top: 34px;
+  padding-bottom: 28px;
 }
 
 .footer-rights {
+  -ms-flex-preferred-size: 230px;
+               flex-basis: 230px;
   margin: 0;
   margin-top: 3px;
   margin-left: 1px;
@@ -2649,6 +2627,7 @@ img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 250px;
+  margin-top: -5px;
   margin-left: 155px;
 }
 
