@@ -841,7 +841,7 @@ img {
   top: 0;
   left: 20px;
   right: 50px;
-  z-index: 50;
+  z-index: 101;
 
   width: auto;
   height: 2px;
@@ -851,7 +851,7 @@ img {
 
 .price-controls__button {
   position: absolute;
-  top: -10px;
+  top: -9px;
   z-index: 100;
 
   width: 20px;

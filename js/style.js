@@ -176,12 +176,14 @@ minBtn.onmousedown = function(e) {
 
     if (newOffset > 0) { /* Проверяем движение мыши */
       minBtn.style.left = startPosition - newOffset + "px"; /* Мыша движется влево, берем кординаты кнопки и минусуем то насколько двинулась мышь */
+      scaleBar.style.left = btnLeft + "px"; /* Двигаю полоску влево вместе с кнопкой */
       if (btnLeft <= 0) { /* Проверяем не уходит ли наша кнопка за пределы блока */
         minBtn.style.left = 0; /* Если уходит возвращаем ее на место в начало блока */
       }
     }
     if (newOffset < 0) { /* Проверяем движение мыши */
       minBtn.style.left = startPosition + Math.abs(newOffset) + "px"; /* Мыша движется вправо, берем кординаты кнопки и добавляем то насколько двинулась мишь */
+      scaleBar.style.left = btnLeft + "px"; /* Двигаю полоску вправо вместе с кнопкой */
       if (btnLeft >= stopMaxBtn - minBtnWidth) { /* Проверяем кординаты нашей кнопки MIN относительно кнопки MAX */
         minBtn.style.left = stopMaxBtn - minBtnWidth + "px"; /* Если кнопка MIN упирается в MAX то дальше она не едет */
       }
@@ -214,12 +216,14 @@ maxBtn.onmousedown = function(e) {
 
     if (newOffset > 0) { /* Проверяем движение мыши */
       maxBtn.style.left = startPosition - newOffset + "px";
+      scaleBar.style.right = btnLeft + "px"; /* Проблема с полоской, нужно брать длину всей полоски и минусовать left кнопки MAX */
       if (btnLeft <= stopMinBtn + minBtnWidth) {
         maxBtn.style.left = stopMinBtn + minBtnWidth + "px";
       }
     }
     if (newOffset < 0) { /* Проверяем движение мыши */
       maxBtn.style.left = startPosition + Math.abs(newOffset) + "px";
+      scaleBar.style.right = btnLeft + "px"; /* Проблема с полоской */
       console.log(stopMaxBtn);
       if (btnLeft >= stopMaxBtn) {
         maxBtn.style.left = stopMaxBtn + "px";
