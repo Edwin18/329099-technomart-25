@@ -5,7 +5,7 @@
     <title>HTML Academy: Техномарт</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style-min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -88,10 +88,10 @@
                 <legend class="form-category__title">Цена:</legend>
                 <div class="price-controls">
                   <div class="price-controls__scale">
+                    <button class="price-controls__button price-controls__button_min" style="left: 50px;" type="button" aria-label="Выбор минимальной цены"></button>
+                    <button class="price-controls__button price-controls__button_max" style="left: 100px;" type="button" aria-label="Выбор максимальной цены"></button>
                     <div class="price-controls__bar"></div>
                   </div>
-                  <button class="price-controls__button price-controls__button_min" style="left: 20px" type="button" aria-label="Выбор минимальной цены"></button>
-                  <button class="price-controls__button price-controls__button_max" style="left: 160px" type="button" aria-label="Выбор максимальной цены"></button>
                 </div>
                 <div class="price-inputs">
                   <label class="visually-hidden" for="price-min-value">Минимальная цена</label>
@@ -340,6 +340,6 @@
         </section>
       </div>
     </footer>
-    <script src="js/style-min.js"></script>
+    <script src="js/style.js"></script>
   </body>
 </html>

@@ -839,9 +839,11 @@ img {
 .price-controls__bar {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 20px;
+  right: 50px;
+  z-index: 50;
 
-  width: 151px;
+  width: auto;
   height: 2px;
 
   background-color: #00ca74;
@@ -849,7 +851,8 @@ img {
 
 .price-controls__button {
   position: absolute;
-  top: 29px;
+  top: -10px;
+  z-index: 100;
 
   width: 20px;
   height: 20px;
