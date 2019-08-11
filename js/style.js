@@ -145,10 +145,6 @@
 //     });
 // };
 
-
-
-
-
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // FILTER-PRICE
 
 var minBtn = document.querySelector(".price-controls__button_min");
@@ -160,10 +156,11 @@ var scale = document.querySelector(".price-controls__scale");
 var scaleWidth = parseInt(window.getComputedStyle(scale).width, 10);
 
 var scaleBar = document.querySelector(".price-controls__bar");
+scaleBar.style.left = parseInt(minBtn.style.left, 10) + (minBtnWidth / 2) + "px"; /* Позиционирую ползунок при загрузке странице, выставляю так что бы он был на середине кнопки */
+scaleBar.style.right = scaleWidth - parseInt(maxBtn.style.left, 10) - (maxBtnWidth / 2) + "px"; /* Позиционирую ползунок при загрузке странице, выставляю так что бы он был на середине кнопки */
 
 // var minPriceInput = document.querySelector("#price-min-value");
 // var maxPriceInput = document.querySelector("#price-max-value");
-
 
 minBtn.onmousedown = function(e) {
   var startOffset = e.pageX; /* Стартовые кординаты мыши */
@@ -176,14 +173,14 @@ minBtn.onmousedown = function(e) {
 
     if (newOffset > 0) { /* Проверяем движение мыши */
       minBtn.style.left = startPosition - newOffset + "px"; /* Мыша движется влево, берем кординаты кнопки и минусуем то насколько двинулась мышь */
-      scaleBar.style.left = btnLeft + "px"; /* Двигаю полоску влево вместе с кнопкой */
+      scaleBar.style.left = btnLeft + (minBtnWidth / 2) + "px"; /* Двигаю полоску влево вместе с кнопкой */
       if (btnLeft <= 0) { /* Проверяем не уходит ли наша кнопка за пределы блока */
         minBtn.style.left = 0; /* Если уходит возвращаем ее на место в начало блока */
       }
     }
     if (newOffset < 0) { /* Проверяем движение мыши */
       minBtn.style.left = startPosition + Math.abs(newOffset) + "px"; /* Мыша движется вправо, берем кординаты кнопки и добавляем то насколько двинулась мишь */
-      scaleBar.style.left = btnLeft + "px"; /* Двигаю полоску вправо вместе с кнопкой */
+      scaleBar.style.left = btnLeft + (minBtnWidth / 2) + "px"; /* Двигаю полоску вправо вместе с кнопкой */
       if (btnLeft >= stopMaxBtn - minBtnWidth) { /* Проверяем кординаты нашей кнопки MIN относительно кнопки MAX */
         minBtn.style.left = stopMaxBtn - minBtnWidth + "px"; /* Если кнопка MIN упирается в MAX то дальше она не едет */
       }
@@ -200,9 +197,6 @@ minBtn.onmousedown = function(e) {
   }
 };
 
-
-
-
 maxBtn.onmousedown = function(e) {
   var startOffset = e.pageX; /* Стартовые кординаты мыши */
   var startPosition = parseInt(window.getComputedStyle(maxBtn).left, 10); /* Стартовые кординаты кнопки */
@@ -216,14 +210,14 @@ maxBtn.onmousedown = function(e) {
 
     if (newOffset > 0) { /* Проверяем движение мыши */
       maxBtn.style.left = startPosition - newOffset + "px";
-      scaleBar.style.right = btnLeft + "px"; /* Проблема с полоской, нужно брать длину всей полоски и минусовать left кнопки MAX */
+      scaleBar.style.right = scaleWidth - btnLeft - (maxBtnWidth / 2) + "px"; /*  */
       if (btnLeft <= stopMinBtn + minBtnWidth) {
         maxBtn.style.left = stopMinBtn + minBtnWidth + "px";
       }
     }
     if (newOffset < 0) { /* Проверяем движение мыши */
       maxBtn.style.left = startPosition + Math.abs(newOffset) + "px";
-      scaleBar.style.right = btnLeft + "px"; /* Проблема с полоской */
+      scaleBar.style.right = scaleWidth - btnLeft - (maxBtnWidth / 2) + "px"; /*  */
       console.log(stopMaxBtn);
       if (btnLeft >= stopMaxBtn) {
         maxBtn.style.left = stopMaxBtn + "px";
